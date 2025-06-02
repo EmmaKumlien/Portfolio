@@ -1,0 +1,23 @@
+@import '_color.scss';
+.footer {
+    @include background_secondary;
+    padding: 1rem;
+    position: relative;
+    z-index: 0;
+
+    .container{
+        text-align: center;
+    }
+
+
+}
+.light_house_img{
+    img{
+        height: 600%;
+        width: auto;
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        z-index: 1;
+    }
+}

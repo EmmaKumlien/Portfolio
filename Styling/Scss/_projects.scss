@@ -1,0 +1,78 @@
+@import "_color.scss";
+@import "_components.scss";
+.projects {
+   margin: 80px 0;
+
+    .container {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .project-grid {
+            display: grid;
+            gap: 40px;
+
+            // Mobil: 1 projekt per rad
+            grid-template-columns: 1fr;
+
+            @media (min-width: 768px) {
+                // Tablet: 2 projekt per rad
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: 1200px) {
+                // Desktop: 3 projekt per rad
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .project-card {
+                @include component_box;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+                }
+
+                .tags {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-bottom: 15px;
+
+                    span {
+                        @include tag_color;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    a {
+                        text-decoration: none;
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                        transition: background-color 0.3s ease;
+
+                        &.live {
+                            @include button_primary;
+                        }
+
+                        &.read-more {
+                            @include button_secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "_color.scss";
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    @include background_primary;
+    scroll-behavior: smooth !important;
+    
+    .wrapper {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+
+        .header {
+            grid-row: 1; 
+        }
+        
+        .main {
+        grid-row: 2;
+        }
+        
+        .footer {
+        grid-row: 3; 
+        }
+    }
+    
+}

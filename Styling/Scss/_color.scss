@@ -1,0 +1,65 @@
+$primary-color: #d1dbe4;
+$secondary-color: #a3b7ca;
+$hoover-color: #5D7B9D;
+$component-color: #4A5A6A;
+$primary-button-color: #C6A76F;
+$button-hover-color: #194a7a;
+$text-color: #000000;
+
+@mixin background_primary {
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+@mixin background_secondary {
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+@mixin primary_darkmode_background {
+  background-color: #194a7a;
+  color: $primary-color;
+}
+
+@mixin component_color{
+  background-color: $component-color;
+  color: $text-color;
+  box-shadow: 0 6px 10px $text-color;
+
+  &:hover {
+    background-color: $hoover-color;
+    color: $text-color;
+  }
+}
+
+@mixin button_primary_color {
+  background-color: $primary-button-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+    color: $primary-color;
+  }
+}
+
+@mixin button_secondary_color {
+  background-color: $secondary-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+    color: $primary-color;
+  }
+}
+
+@mixin tag_color{
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+@mixin contact_form_colors{
+  background-color: $hoover-color;
+  color: $text-color;
+  box-shadow: 0 6px 10px $text-color;
+
+}
