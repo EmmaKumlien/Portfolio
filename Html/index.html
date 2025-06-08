@@ -11,15 +11,16 @@
 <body class ="wrapper">
     <section class="header">
         <div class="container">
+            <i class="fa-solid fa-bars" id="menuBar"></i>
             <div class="navigation">
-                <i class="fa-solid fa-bars" id="menuBar"></i>
-                <div class="navigationLinks">
-                    <div class="logo">
+                <div class="logo">
+                    <a href="#hero" id="home-btn">
                         <img src="/Assets/Images/seashell_seaweed.png" alt="picture of three seashells and sea weed">
-                        <h1>Emma</h1>
-                    </div>
+                        <img src="/Assets/Images/Emma.png" alt="Emma's name logo" id="logoText">
+                    </a>
+                </div>
+                <div class="navigationLinks">
                     <div class="menuLinks">
-                        <a href="#hero" id="home-btn"><i class="fa-solid fa-house"></i></a>
                         <a href="#personal">Om Mig <i class="fa-solid fa-laptop-code homeSymbol" id="projectSymbol"></i></a>
                         <a href="#projects">Projekt <i class="fa-solid fa-house-laptop homeSymbol" id="workSymbol"></i></a>
                         <a href="#technical">Tech Stack <i class="fa-solid fa-glasses homeSymbol" id="technicalSymbol"></i></a>
@@ -213,7 +214,7 @@
         </div>
     </section>
 
-
+    <script src="/JavaScript/menuDropDown.js"></script>
     <script src="https://kit.fontawesome.com/3fa4ea9af4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

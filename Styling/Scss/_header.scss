@@ -5,19 +5,43 @@
     .container {
         padding: 55px 0;
         @media (max-width: 767px) { // Mobile version
-            .navigation {
+            #menuBar {
+                font-size: 2rem;
+                cursor: pointer;
+                position: absolute;
+                right: 5%;
+                top: 3%;
+                padding-top: 5%;
                 display: block;
+            }
+            .navigation {
+                display: flex;
+                align-items: center; 
+                justify-content: space-between; 
                 position: relative;
 
-                #menuBar {
-                    font-size: 2rem;
-                    cursor: pointer;
-                    position: absolute;
-                    right: 5%;
-                    top: 15%;
-                    padding-top: 5%;
-                    display: block;
+                .logo{
+
+                    #home-btn{
+                        display: flex;
+                        color: #22223b;
+                        text-decoration: none;
+                        align-items: center;
+                        text-align: center;
+
+                        img{
+                            width: 3rem;
+                            height: auto;
+                            margin-right: 5px;
+                        }
+
+                        #logoText{
+                            width: 20%;
+                        }
+                    }
+
                 }
+
                 .navigationLinks {
                     display: none; // Hidden by default
                     position: absolute;
@@ -51,21 +75,42 @@
         }
 
         @media(min-width: 768px) {
-            .navigation {
+            #menuBar {
+                font-size: 2.5rem;
+                cursor: pointer;
+                position: absolute;
+                right: 5%;
+                top: 3%;
+                padding-top: 5%;
                 display: block;
+            }
+            .navigation {
+                display: flex;
+                justify-content: space-between;
                 position: relative;
 
-                #menuBar {
-                    font-size: 3rem;
-                    cursor: pointer;
-                    position: absolute;
-                    right: 5%;
-                    top: 15%;
-                    padding-top: 5%;
-                    display: block;
+                .logo{
+
+                    #home-btn{
+                        display: flex;
+                        color: #22223b;
+                        text-decoration: none;
+                        align-items: center;
+                        text-align: center;
+
+                        img{
+                            width: 3rem;
+                            height: auto;
+                            margin-right: 5px;
+                        }
+                        #logoText{
+                           width: 20%;
+                        }
+                    }
+
                 }
                 .navigationLinks {
-                    display: none; // Hidden by default
+                    display: none;
                     position: absolute;
                     top: 100%;
                     left: 0;
@@ -75,61 +120,71 @@
                     width: 100%;
                     margin: 0 auto;
 
-                    a {
-                        display: block;
-                        padding: 10px 20px;
-                        text-decoration: none;
-                        font-size: 1rem;
-
-                        &:hover {
-                            @include component_color;
-                            transition: background-color 0.3s ease;
+                    .menuLinks{
+                        a {
+                            display: block;
+                            padding: 10px 20px;
+                            text-decoration: none;
+                            font-size: 1rem;
+    
+                            &:hover {
+                                @include component_color;
+                                transition: background-color 0.3s ease;
+                            }
+                        }
+    
+                        &.active {
+                            display: block; // Show when active
+                            opacity: 1;
+                            transition: opacity 0.3s ease;
                         }
                     }
 
-                    &.active {
-                        display: block; // Show when active
-                        opacity: 1;
-                        transition: opacity 0.3s ease;
-                    }
                 }
             }
         }
         
         @media(min-width: 1200px) {
+            #menuBar{
+                display: none;
+            }
             .navigation{
-                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                #menuBar{
-                    display: none;
-                }
-                .navigationLinks{
-                    display: flex;
-                    justify-content: space-between;
-                    height: 50px;
-                    box-shadow: none;
-                    margin: auto;
+                .logo{
 
-                    .logo{
+                    #home-btn{
                         display: flex;
                         color: #22223b;
+                        text-decoration: none;
+                        align-items: center;
+                        text-align: center;
 
                         img{
-                            width: 50px;
+                            width: 3rem;
                             height: auto;
-                            margin-right: 10px;
+                            margin-right: 5px;
+                        }
+                        #logoText{
+                            width: 30%;
                         }
                     }
 
+                }
+                .navigationLinks{
+                    display: flex;
+                    height: 50px;
+                    box-shadow: none;
+                    margin: auto;
+                    position: relative;
+
                     .menuLinks{
                         display: flex;
-                        #home-btn{
-                            font-size: 1.2rem;
-                            color: #22223b;
-                            padding: 25px;
-                            margin-right: 15px;
-                            margin-left: 15px;
-                        }
+                        justify-content: space-evenly;
+                        width: 100%;
+
                         a{
                             color: #22223b;
                             text-decoration: none;
@@ -139,7 +194,6 @@
                             padding: 25px 45px 25px 25px;
                             position: relative;
                             font-size: 1.2rem;
-    
     
                             .homeSymbol{
                                 position: absolute;
@@ -156,14 +210,7 @@
                                 transition-duration: 0.5s;
                                 border-radius: 20px;
                                 box-shadow: 10px 10px 10px #263e40;
-    
-                                #home-btn{
-                                    font-size: 2rem;
-                                    color: #22223b;
-                                    padding: 10px 0;
-                                    margin-right: 15px;
-                                    margin-left: 15px;
-                                }
+
                                 .homeSymbol{
                                     position: absolute;
                                     display: block;
@@ -183,11 +230,7 @@
                             display: none; 
                         }
                         
-                    }
-
-                   
-
-                   
+                    }                   
     
                 }
             }
@@ -195,17 +238,17 @@
 
         @media(min-width: 1400px) {
             .navigation{
-                display: block;
 
                 .navigationLinks{
-                    display: flex;
-                    justify-content: space-between;
                     font-size: 1rem;
 
-                    a{
-                        text-decoration:none;
-
+                    .menuLinks{
+                        a{
+                            text-decoration:none;
+    
+                        }
                     }
+
                 }
             }
         }

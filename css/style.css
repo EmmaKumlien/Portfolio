@@ -34,18 +34,35 @@ html .wrapper .footer, body .wrapper .footer {
   padding: 55px 0;
 }
 @media (max-width: 767px) {
-  .header .container .navigation {
-    display: block;
-    position: relative;
-  }
-  .header .container .navigation #menuBar {
+  .header .container #menuBar {
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
     right: 5%;
-    top: 15%;
+    top: 3%;
     padding-top: 5%;
     display: block;
+  }
+  .header .container .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .header .container .navigation .logo #home-btn {
+    display: flex;
+    color: #22223b;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  .header .container .navigation .logo #home-btn img {
+    width: 3rem;
+    height: auto;
+    margin-right: 5px;
+  }
+  .header .container .navigation .logo #home-btn #logoText {
+    width: 20%;
   }
   .header .container .navigation .navigationLinks {
     display: none;
@@ -75,18 +92,34 @@ html .wrapper .footer, body .wrapper .footer {
   }
 }
 @media (min-width: 768px) {
-  .header .container .navigation {
-    display: block;
-    position: relative;
-  }
-  .header .container .navigation #menuBar {
-    font-size: 3rem;
+  .header .container #menuBar {
+    font-size: 2.5rem;
     cursor: pointer;
     position: absolute;
     right: 5%;
-    top: 15%;
+    top: 3%;
     padding-top: 5%;
     display: block;
+  }
+  .header .container .navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .header .container .navigation .logo #home-btn {
+    display: flex;
+    color: #22223b;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  .header .container .navigation .logo #home-btn img {
+    width: 3rem;
+    height: auto;
+    margin-right: 5px;
+  }
+  .header .container .navigation .logo #home-btn #logoText {
+    width: 20%;
   }
   .header .container .navigation .navigationLinks {
     display: none;
@@ -99,60 +132,63 @@ html .wrapper .footer, body .wrapper .footer {
     width: 100%;
     margin: 0 auto;
   }
-  .header .container .navigation .navigationLinks a {
+  .header .container .navigation .navigationLinks .menuLinks a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1rem;
   }
-  .header .container .navigation .navigationLinks a:hover {
+  .header .container .navigation .navigationLinks .menuLinks a:hover {
     background-color: #4A5A6A;
     color: #000000;
     box-shadow: 0 6px 10px #000000;
     transition: background-color 0.3s ease;
   }
-  .header .container .navigation .navigationLinks a:hover:hover {
+  .header .container .navigation .navigationLinks .menuLinks a:hover:hover {
     background-color: #5D7B9D;
     color: #000000;
   }
-  .header .container .navigation .navigationLinks.active {
+  .header .container .navigation .navigationLinks .menuLinks.active {
     display: block;
     opacity: 1;
     transition: opacity 0.3s ease;
   }
 }
 @media (min-width: 1200px) {
-  .header .container .navigation {
-    display: block;
-  }
-  .header .container .navigation #menuBar {
+  .header .container #menuBar {
     display: none;
+  }
+  .header .container .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .container .navigation .logo #home-btn {
+    display: flex;
+    color: #22223b;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  .header .container .navigation .logo #home-btn img {
+    width: 3rem;
+    height: auto;
+    margin-right: 5px;
+  }
+  .header .container .navigation .logo #home-btn #logoText {
+    width: 30%;
   }
   .header .container .navigation .navigationLinks {
     display: flex;
-    justify-content: space-between;
     height: 50px;
     box-shadow: none;
     margin: auto;
-  }
-  .header .container .navigation .navigationLinks .logo {
-    display: flex;
-    color: #22223b;
-  }
-  .header .container .navigation .navigationLinks .logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+    position: relative;
   }
   .header .container .navigation .navigationLinks .menuLinks {
     display: flex;
-  }
-  .header .container .navigation .navigationLinks .menuLinks #home-btn {
-    font-size: 1.2rem;
-    color: #22223b;
-    padding: 25px;
-    margin-right: 15px;
-    margin-left: 15px;
+    justify-content: space-evenly;
+    width: 100%;
   }
   .header .container .navigation .navigationLinks .menuLinks a {
     color: #22223b;
@@ -179,13 +215,6 @@ html .wrapper .footer, body .wrapper .footer {
     border-radius: 20px;
     box-shadow: 10px 10px 10px #263e40;
   }
-  .header .container .navigation .navigationLinks .menuLinks a:hover #home-btn {
-    font-size: 2rem;
-    color: #22223b;
-    padding: 10px 0;
-    margin-right: 15px;
-    margin-left: 15px;
-  }
   .header .container .navigation .navigationLinks .menuLinks a:hover .homeSymbol {
     position: absolute;
     display: block;
@@ -202,15 +231,10 @@ html .wrapper .footer, body .wrapper .footer {
   }
 }
 @media (min-width: 1400px) {
-  .header .container .navigation {
-    display: block;
-  }
   .header .container .navigation .navigationLinks {
-    display: flex;
-    justify-content: space-between;
     font-size: 1rem;
   }
-  .header .container .navigation .navigationLinks a {
+  .header .container .navigation .navigationLinks .menuLinks a {
     text-decoration: none;
   }
 }
@@ -390,7 +414,6 @@ html .wrapper .footer, body .wrapper .footer {
   margin: 80px 0;
 }
 .projects .container h2 {
-  font-size: 3rem;
   text-align: center;
   margin: 20px 0;
 }
