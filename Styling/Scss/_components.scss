@@ -72,3 +72,22 @@
         margin: 0 auto;
     }
 }
+
+@mixin navigation {
+    @include navigation_color;
+    a{
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        font-size: 1.05rem;
+        
+        &:hover {
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        i{
+            margin: 0.5rem 0 0 0.5rem;
+        }
+    }
+
+}

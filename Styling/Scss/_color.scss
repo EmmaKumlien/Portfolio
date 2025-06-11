@@ -1,8 +1,9 @@
-$primary-color: #d1dbe4;
-$secondary-color: #a3b7ca;
-$hoover-color: #5D7B9D;
+$primary-color: #D1DBE4;
+$secondary-color: #5D7B9D;
+$hoover-color:  #C6A76F;
 $component-color: #4A5A6A;
 $primary-button-color: #C6A76F;
+$secondary-button-color: #a3b7ca;
 $button-hover-color: #194a7a;
 $text-color: #000000;
 
@@ -62,4 +63,14 @@ $text-color: #000000;
   color: $text-color;
   box-shadow: 0 6px 10px $text-color;
 
+}
+
+@mixin navigation_color{
+  a{
+    color: $text-color;
+    &:hover {
+      color: $hoover-color;
+      background-color: $secondary-color;
+    }
+  }
 }
