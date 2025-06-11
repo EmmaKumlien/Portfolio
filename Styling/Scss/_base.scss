@@ -40,6 +40,17 @@ html, body{
     section{
         padding-block: 8rem;
     }
+
+    .personal, .technical{
+
+        --mask:
+        radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+        radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+        radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+        radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+      -webkit-mask: var(--mask);
+              mask: var(--mask);
+    }
     
 }
 
