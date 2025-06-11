@@ -203,15 +203,11 @@ html section, body section {
     width: 100%;
   }
   .header .container .navigation .logo {
-    border: 1px solid red;
     z-index: 2000;
   }
   .header .container .navigation .logo #home-btn {
-    border: 1 px solid blue;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
   }
   .header .container .navigation .logo #home-btn #logoImage {
     width: 4rem;

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBar = document.getElementById("menuBar");
     const navigationLinks = document.querySelector(".navigationLinks");
     const links = navigationLinks.querySelectorAll("a");
+    const logo = document.querySelector("#home-btn"); // Select the logo/home button
 
     // Handle menu toggle for smaller screens
     if (menuBar) {
@@ -31,4 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Handle logo/home button click
+    if (logo) {
+        logo.addEventListener("click", () => {
+            console.log("Logo clicked");
+
+            // Remove 'active' class from all links
+            links.forEach(nav => nav.classList.remove("active"));
+        });
+    }
 });
