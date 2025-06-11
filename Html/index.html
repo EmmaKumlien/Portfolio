@@ -15,7 +15,7 @@
             <div class="navigation">
                 <div class="logo">
                     <a href="#hero" id="home-btn">
-                        <img src="/Assets/Images/seashell_seaweed.png" alt="picture of three seashells and sea weed">
+                        <img src="/Assets/Images/seashell_seaweed.png" alt="picture of three seashells and sea weed" id="logoImage">
                         <img src="/Assets/Images/Emma.png" alt="Emma's name logo" id="logoText">
                     </a>
                 </div>
@@ -33,23 +33,26 @@
     </section>
         
     <section class="main">
-        <div class="container">
-            <div class="hero" id="hero">
-                <div class="profilePic">
-                    <img src="/Assets/Images/Profilbild.jpg" alt="Picture of me" id="profile">
-                </div>
 
-                <div id="quote">
-                    <h4>Webbutvecklare baserad i Göteborg </h4>
-                    <h4>– med kärlek till kusten och kod.</h4>
-                </div>
-                <div id="open_shell_img">
-                    <img src="/Assets/Images/Blaemussla_open.png" alt="picture of a sea shell">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero" id="hero">
+                    <div id="quote">
+                        <h4>Webbutvecklare baserad i Göteborg </h4>
+                        <h5>– med kärlek till kusten och kod.</h5>
+                    </div>
+                    <div class="bgBox1"></div>
+                    <div class="bgBox2"></div>
+                    <div class="profilePic">
+                        <img src="/Assets/Images/ProfilePictureNoBG.png" alt="Picture of me" id="profile">
+                    </div>
+                    <div id="open_shell_img">
+                        <img src="/Assets/Images/Blaemussla_open.png" alt="picture of a sea shell">
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     
-
         <section class="personal" id="personal"> 
             <div class="container">
                 <h2>Om mig</h2>
@@ -145,9 +148,6 @@
         </section>
 
         <section class="technical" id="technical">
-            <div id="sea-shell-closed">
-                <img src="/Assets/Images/Blaemussla_close.png" alt="closed sea shell">
-            </div>
             <div class="container">
                 <h2>Tech Stack</h2>
                 <ul>
@@ -206,9 +206,6 @@
     </section>
 
     <section class="footer">
-        <div class="light_house_img">
-            <img src="/Assets/Images/light_house.png" alt="Picture of a red light house">
-        </div>
         <div class="container">
             <p>&copy; 2025 Emma's Resume</p>
         </div>
