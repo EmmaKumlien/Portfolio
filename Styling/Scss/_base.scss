@@ -2,12 +2,16 @@
 *{
     box-sizing: border-box;
 }
+html{
+    color-scheme: dark light;
+}
 
 html, body{
     font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
+    margin-inline: auto;
     @include background_primary;
     scroll-behavior: smooth !important;
     
@@ -28,5 +32,45 @@ html, body{
         grid-row: 3; 
         }
     }
+
+    section{
+        padding-block: 8rem;
+    }
     
+}
+
+
+// Responsive breakpoints based on Bootstrap
+
+@mixin xs {
+    @content;
+    
+}
+
+@mixin sm {
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @content;
+    }
 }

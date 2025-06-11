@@ -1,44 +1,36 @@
-@import "_color.scss";
-@import "_components.scss";
+@import "_base.scss";
 
-.contact {
-    @include background_secondary;
-    padding: 80px 0;
-
-    .container {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        .contact-form{
-
-            .form-group{
-                @include contact_form;
-                margin: 5% 20%;
-                display: grid;
-                grid-template-areas: 'name' 'telephone' 'email' 'message' 'button';
-                row-gap: 1rem;
-
-                .form-name{
-                    grid-area: 'name';
-                   
-                }
-                .form-telephone{
-                    grid-area: 'telephone';
-                }
-                .form-email{
-                    grid-area: 'email';
-                }
-                .form-message{
-                    grid-area: 'message';
-                }
-
-                button {
-                    grid-area: 'button';
-                }
-            }
+.contact{
+    .container{
+        @include xs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+        @include sm {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include md {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include lg {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include xl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
+    
 }
