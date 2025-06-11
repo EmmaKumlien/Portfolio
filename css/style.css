@@ -17,12 +17,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -53,12 +57,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -266,12 +274,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -343,12 +355,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -488,12 +504,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -566,12 +586,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -640,12 +664,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -717,12 +745,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;
@@ -791,12 +823,16 @@ html, body {
   scroll-behavior: smooth !important;
 }
 html .wrapper, body .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 html .wrapper .header, body .wrapper .header {
   grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: inherit;
 }
 html .wrapper .main, body .wrapper .main {
   grid-row: 2;

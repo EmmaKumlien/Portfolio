@@ -16,12 +16,16 @@ html, body{
     scroll-behavior: smooth !important;
     
     .wrapper {
-        height: 100vh;
+        min-height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr auto;
 
         .header {
             grid-row: 1; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: inherit;
         }
         
         .main {
