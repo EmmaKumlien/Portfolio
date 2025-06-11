@@ -35,18 +35,29 @@
                     }
                 }
                 .navigationLinks{
-                    display: none;
-                    align-items: center;
-                    width: 100%;
-                    padding: 0.5rem;
-
+                    display: none; /* Default state: hidden */
+                    position: absolute;
+                    top: 100%; /* Adjust as needed */
+                    right: 0;
+                    background-color: #5D7B9D;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    z-index: 1000;
+                    
                     a{
-                        margin: 0.5rem 0;
-                        text-decoration: none;
+                        display: block;
 
                         i{
                             margin-right: 0.5rem;
                         }
+                    }
+                    &.active{
+                        display: block;
+                        align-items: flex-start;
+                        text-align: left;
+                        padding: 0.5rem;
+                        border-radius: 25px;
+                        @include navigation;
+
                     }
                 }
             }
@@ -124,11 +135,21 @@
                 }
                 .navigationLinks{
                     display: flex;
-                    justify-content: right;
+                    justify-content: flex-end;
                     align-items: center;
                     text-align: center;
-
+                    background-color: transparent;
+                    box-shadow: none;
+                    top: auto;
+                    right: auto;
+                    flex-direction: row;
+                    z-index: 0;
                     @include navigation;
+
+                    .menuLinks{
+                        display: flex;
+                    }
+
                 }
             }
         }

@@ -102,17 +102,46 @@ html section, body section {
   height: auto;
 }
 .header .container .navigation .navigationLinks {
-  display: none;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem;
+  display: none; /* Default state: hidden */
+  position: absolute;
+  top: 100%; /* Adjust as needed */
+  right: 0;
+  background-color: #5D7B9D;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 .header .container .navigation .navigationLinks a {
-  margin: 0.5rem 0;
-  text-decoration: none;
+  display: block;
 }
 .header .container .navigation .navigationLinks a i {
   margin-right: 0.5rem;
+}
+.header .container .navigation .navigationLinks.active {
+  display: block;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 25px;
+}
+.header .container .navigation .navigationLinks.active a {
+  color: #000000;
+}
+.header .container .navigation .navigationLinks.active a:hover {
+  color: #C6A76F;
+  background-color: #5D7B9D;
+}
+.header .container .navigation .navigationLinks.active a {
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 1.05rem;
+}
+.header .container .navigation .navigationLinks.active a:hover {
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+.header .container .navigation .navigationLinks.active a i {
+  margin: 0.5rem 0 0 0.5rem;
 }
 @media (min-width: 768px) {
   .header .container #menuBar {
@@ -175,9 +204,15 @@ html section, body section {
   }
   .header .container .navigation .navigationLinks {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    z-index: 0;
   }
   .header .container .navigation .navigationLinks a {
     color: #000000;
@@ -198,6 +233,9 @@ html section, body section {
   }
   .header .container .navigation .navigationLinks a i {
     margin: 0.5rem 0 0 0.5rem;
+  }
+  .header .container .navigation .navigationLinks .menuLinks {
+    display: flex;
   }
 }
 @media (min-width: 1200px) {
