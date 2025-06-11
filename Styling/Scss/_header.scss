@@ -78,7 +78,8 @@
                 .logo{
 
                     #home-btn{
-                        display: flex;
+                        width: fit-content;
+                        height: fit-content;
                         #logoImage{
                             width: 4rem;
                             height: auto;
@@ -89,6 +90,7 @@
                         }
                     }
                 }
+
                 .navigationLinks{
                     display: none;
                     align-items: center;
@@ -107,8 +109,6 @@
             }
         }
         @include lg {
-
-
             #menuBar{
                 display: none;
             }
@@ -120,15 +120,19 @@
                 align-items: center;
                 width: 100%;
                 .logo{
+                    border: 1px solid red;
+                    z-index: 2000;
                     #home-btn{
-                        display: flex;
-
+                        border: 1 px solid blue;
+                        
+                        width: fit-content;
+                        height: fit-content;
                         #logoImage{
-                            width: 5rem;
+                            width: 4rem;
                             height: auto;
                         }
                         #logoText{
-                            width: 7rem;
+                            width: 6rem;
                             height: auto;
                         }
                     }
@@ -165,6 +169,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            
         }
 
     }

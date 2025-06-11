@@ -164,7 +164,10 @@ html section, body section {
     display: block;
   }
   .header .container .navigation .logo #home-btn {
-    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .header .container .navigation .logo #home-btn #logoImage {
     width: 4rem;
@@ -199,15 +202,23 @@ html section, body section {
     align-items: center;
     width: 100%;
   }
+  .header .container .navigation .logo {
+    border: 1px solid red;
+    z-index: 2000;
+  }
   .header .container .navigation .logo #home-btn {
-    display: flex;
+    border: 1 px solid blue;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .header .container .navigation .logo #home-btn #logoImage {
-    width: 5rem;
+    width: 4rem;
     height: auto;
   }
   .header .container .navigation .logo #home-btn #logoText {
-    width: 7rem;
+    width: 6rem;
     height: auto;
   }
   .header .container .navigation .navigationLinks {
