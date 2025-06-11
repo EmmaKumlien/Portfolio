@@ -2,6 +2,7 @@
 @import "_color.scss";
 
 .personal{
+    padding-block: 8rem;
     @include background_secondary;
     .container{
         @include xs {

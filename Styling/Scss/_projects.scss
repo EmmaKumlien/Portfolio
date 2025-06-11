@@ -1,6 +1,7 @@
 @import "_base.scss";
 
 .projects{
+    padding-block: 8rem;
     .container{
         @include xs {
             display: flex;
