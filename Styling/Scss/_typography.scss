@@ -1,7 +1,13 @@
 @mixin title_big {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     margin: 20px 0;
+}
+
+@mixin title_medium {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
 }
 
 @mixin title_small {
