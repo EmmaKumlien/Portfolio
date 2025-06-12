@@ -2,7 +2,7 @@ $primary-color: #D1DBE4;
 $secondary-color: #5D7B9D;
 $hoover-color:  #C6A76F;
 $component-color: #4A5A6A;
-$primary-button-color: #C6A76F;
+$primary-button-color: #194a7a;
 $secondary-button-color: #a3b7ca;
 $button-hover-color: #194a7a;
 $text-color: #000000;
@@ -35,16 +35,18 @@ $text-color: #000000;
 
 @mixin button_primary_color {
   background-color: $primary-button-color;
-  color: $text-color;
+  color: $primary-color !important;
 
   &:hover {
-    background-color: $button-hover-color;
-    color: $primary-color;
+    border: 1px solid $primary-button-color;
+    background-color: $secondary-button-color;
+    color: $text-color !important;
   }
 }
 
 @mixin button_secondary_color {
-  background-color: $secondary-color;
+  border: 1px solid $primary-button-color;
+  background-color: $secondary-button-color;
   color: $text-color;
 
   &:hover {
@@ -54,7 +56,7 @@ $text-color: #000000;
 }
 
 @mixin tag_color{
-  background-color: $secondary-color;
+  background-color: inherit;
   color: $text-color;
 }
 
