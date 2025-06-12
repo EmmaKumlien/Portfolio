@@ -3,6 +3,11 @@
 
 .hero-section{
     position: relative;
+    margin-bottom: -3rem;
+    background-image: url("/Assets/Images/BG_Contact.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     .container{
         @include xs {
             padding-block: 10rem;
@@ -23,19 +28,6 @@
                         @include title_medium;
                     }
                 }
-                .profilePic{
-                    margin-bottom: 1rem;
-
-                    #profile{
-                        position: absolute;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        top: 15%;
-                        width: 10rem;
-                        height: auto;
-                        border-radius: 50%;
-                    }
-                }
                 #open_shell_img{
 
                     img{
@@ -53,7 +45,7 @@
 
         }
         @include md {
-            padding-block: 8rem;
+            padding-block: 12rem;
             .hero{
                 display: flex;
                 justify-content: center;
@@ -70,21 +62,6 @@
                     }
                     h5{
                         @include title_medium;
-                    }
-                }
-
-                .profilePic{
-                    margin-bottom: 1rem;
-
-                    #profile{
-                        position: absolute;
-                        left:auto;
-                        transform: translate(0);
-                        right: 0;
-                        top: 18rem;
-                        width: 18rem;
-                        height: auto;
-                        border-radius: 0;
                     }
                 }
                 #open_shell_img{
@@ -102,6 +79,7 @@
         }
         @include lg {
             .hero{
+                padding-block: 12rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -110,26 +88,14 @@
                 #quote{
                     font-size: 1.5rem;
                     text-align: center;
-                    margin: 1rem 2rem;
+                    margin: 0 2rem;
+                    margin-top: -3rem;
 
                     h4{
                         @include title_big;
                     }
                     h5{
                         @include title_medium;
-                    }
-                }
-
-                .profilePic{
-                    margin-bottom: 1rem;
-
-                    #profile{
-                        position: absolute;
-                        right: 0;
-                        top: 12rem;
-                        width: 20rem;
-                        height: auto;
-                        border-radius: 0;
                     }
                 }
                 #open_shell_img{
