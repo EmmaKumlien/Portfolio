@@ -1,36 +1,103 @@
 @import "_base.scss";
+@import "_typography.scss";
+@import "_color.scss";
 
 .testimonials{
     padding-block: 8rem;
     .container{
         @include xs {
-            display: flex;
-            flex-direction: column;
+            padding-block: 8rem;
+            display: block;
             align-items: center;
+            text-align: center;
+
+            h4{
+                @include title_big;
+                padding-bottom: 6rem;
+            }
+            .testimonial-slideshow{
+                overflow: hidden;
+                position: relative;
+
+                .testimonial-grid{
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    will-change: transform;
+    
+                    .testimonial-card{
+                        @include review_card;
+                        flex: 0 0 100%;
+                        margin: 1rem;
+                        padding: 2rem 1rem;
+                        border-radius: 10px 10px 25px 10px;
+                    }
+                }
+            }
+
         }
         @include sm {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
         @include md {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            padding-block: 8rem;
+            display: block;
             align-items: center;
+            text-align: center;
+
+            h4{
+                @include title_big;
+            }
+            .testimonial-slideshow{
+                overflow: hidden;
+                position: relative;
+
+                .testimonial-grid{
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    will-change: transform;
+    
+                    .testimonial-card{
+                        @include review_card;
+                        flex: 0 0 50%; 
+                        margin: 1rem;
+                        padding: 2rem 1rem;
+                        border-radius: 10px 10px 25px 10px;
+                    }
+                }
+            }
+
         }
         @include lg {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            padding-block: 8rem;
+            display: block;
             align-items: center;
+            text-align: center;
+
+            h4{
+                @include title_big;
+            }
+            .testimonial-slideshow{
+                overflow: hidden;
+                position: relative;
+
+                .testimonial-grid{
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    will-change: transform;
+    
+                    .testimonial-card{
+                        @include review_card;
+                        flex: 0 0 33.33%; 
+                        margin: 1rem;
+                        padding: 2rem 1rem;
+                        border-radius: 10px 10px 25px 10px;
+                    }
+                }
+            }
+
         }
         @include xl {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+ 
         }
     }
 

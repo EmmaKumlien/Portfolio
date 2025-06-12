@@ -64,6 +64,12 @@ $text-color: #000000;
   color: $text-color;
 }
 
+@mixin review_card{
+  background-color: rgba($secondary-color, 0.5);;
+  color: $text-color;
+  box-shadow: 0 6px 10px $component-color;
+}
+
 @mixin icon_color{
   color: $text-color;
   transition: color 0.3s ease;
