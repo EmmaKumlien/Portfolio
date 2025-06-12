@@ -3,6 +3,7 @@
 @import "_color.scss";
 
 .testimonials{
+    display: none;
     padding-block: 8rem;
     .container{
         @include xs {
