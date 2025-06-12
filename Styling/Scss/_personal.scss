@@ -1,38 +1,113 @@
 @import "_base.scss";
 @import "_color.scss";
+@import "_typography.scss";
 
 .personal{
-    padding-block: 8rem;
     @include background_secondary;
     .container{
         @include xs {
-            display: flex;
-            flex-direction: column;
+            padding-block: 8rem;
+            display: block;
+            text-align: center;
             align-items: center;
+
+            h4{
+                @include title_big;
+            }
+            .personal-info{
+                border: 3px solid #194a7a;
+                background-color: #D1DBE4;
+                padding: 2rem;
+
+                img{
+                    display: none;
+                }
+
+                p{
+                    @include text;
+                }
+            }
+
         }
         @include sm {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
         @include md {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            padding-block: 12rem;
+            display: block;
+            text-align: center;
             align-items: center;
+
+            h4{
+                @include title_big;
+                margin-bottom: 2rem;
+            }
+            .personal-info{
+                border: 3px solid #194a7a;
+                background-color: #D1DBE4;
+                padding: 3rem;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+
+                #BioImage{
+                    grid-column: 1;
+                    display: block;
+                    width: 60%;
+                    height: auto;
+                    border-radius: 100%;
+
+                }
+                .personal-text{
+                    p{
+                        grid-column: 2;
+                        @include text;
+                    }
+                }
+            }
         }
         @include lg {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            padding-block: 15rem;
+            display: block;
+            text-align: center;
             align-items: center;
+
+            h4{
+                @include title_big;
+                margin-bottom: 4rem;
+            }
+            .personal-info{
+                border: none;
+                background-color: transparent;
+                padding: 2rem;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+
+                #BioImage{
+                    grid-column: 1;
+                    display: block;
+                    width: 60%;
+                    height: auto;
+                    border-radius: 0;
+
+                }
+                .personal-text{
+                    p{
+                        grid-column: 2;
+                        @include text;
+                    }
+                }
+            }
         }
         @include xl {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
     }
 
