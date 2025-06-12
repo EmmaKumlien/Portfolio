@@ -1,36 +1,37 @@
 @import "_base.scss";
+@import "_typography.scss";
 
 .footer{
-    padding: 2rem 0;
     .container{
         @include xs {
+            padding-block: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            p{
+                @include text;
+            }
         }
         @include sm {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
         @include md {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            text-align: center;
         }
         @include lg {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            text-align: center;
         }
         @include xl {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
     }
    
