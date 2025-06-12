@@ -1,7 +1,8 @@
 @import "_base.scss";
+@import "_typography.scss";
+@import "_components.scss";
 
 .contact{
-    padding-block: 8rem;
     margin-top: -4rem;
     background-image: url("/Assets/Images/BG_Contact.png");
     background-position: center;
@@ -9,33 +10,79 @@
     background-size: cover;
     .container{
         @include xs {
-            display: flex;
-            flex-direction: column;
+            padding-block: 8rem;
+            display: block;
             align-items: center;
+            text-align: center;
+
+            h4{
+                @include title_big;
+                margin-bottom: 3rem;
+            }
+            .contact-form{
+                margin: 2% auto; // Reduce margins for smaller screens
+                width: 95%;
+                @include contact_form;
+                h5{
+                    @include title_small;
+                    margin-bottom: 1rem;
+
+                }
+            }
+            .contact-links{
+                margin-top: 4rem;
+
+                a{
+                    margin: 0 1rem;
+                    font-size: 2rem;
+                    @include icon_color;
+                }
+            }
+
         }
         @include sm {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
         @include md {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            padding-block: 12rem;
+
         }
         @include lg {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            padding-block: 15rem;
+            padding-block: 8rem;
+            display: block;
             align-items: center;
+            text-align: center;
+
+            h4{
+                @include title_big;
+                margin-bottom: 3rem;
+            }
+            .contact-form{
+                margin: 2% auto;
+                width: 40%;
+
+                h5{
+                    @include title_small;
+                    margin-bottom: 1rem;
+
+                }
+            }
+
+            .contact-links{
+
+                margin-top: 4rem;
+
+                a{
+                    margin: 0 1rem;
+                    font-size: 4rem;
+                    @include icon_color;
+                }
+            }
+
         }
         @include xl {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
         }
     }
     

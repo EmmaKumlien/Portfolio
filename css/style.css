@@ -157,6 +157,7 @@ html .personal, html .technical, body .personal, body .technical {
   font-size: 1.05rem;
 }
 .header .container .navigation .navigationLinks.active a:hover {
+  transition: color 0.3s ease;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
@@ -262,6 +263,7 @@ html .personal, html .technical, body .personal, body .technical {
     font-size: 1.05rem;
   }
   .header .container .navigation .navigationLinks a:hover {
+    transition: color 0.3s ease;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
@@ -422,6 +424,11 @@ html .personal, html .technical, body .personal, body .technical {
 
 .hero-section {
   position: relative;
+  margin-bottom: -3rem;
+  background-image: url("/Assets/Images/BG_Contact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-section .container {
   padding-block: 10rem;
@@ -442,24 +449,11 @@ html .personal, html .technical, body .personal, body .technical {
   margin: 20px 0;
 }
 .hero-section .container .hero #quote h5 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 2rem;
   text-align: center;
+  font-weight: 700;
   margin: 20px 0;
   color: #194a7a;
-}
-.hero-section .container .hero .profilePic {
-  margin-bottom: 1rem;
-}
-.hero-section .container .hero .profilePic #profile {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 15%;
-  width: 10rem;
-  height: auto;
-  border-radius: 50%;
 }
 .hero-section .container .hero #open_shell_img img {
   width: 9rem;
@@ -471,7 +465,7 @@ html .personal, html .technical, body .personal, body .technical {
 }
 @media (min-width: 768px) {
   .hero-section .container {
-    padding-block: 8rem;
+    padding-block: 12rem;
   }
   .hero-section .container .hero {
     display: flex;
@@ -490,25 +484,11 @@ html .personal, html .technical, body .personal, body .technical {
     margin: 20px 0;
   }
   .hero-section .container .hero #quote h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 2rem;
     text-align: center;
+    font-weight: 700;
     margin: 20px 0;
     color: #194a7a;
-  }
-  .hero-section .container .hero .profilePic {
-    margin-bottom: 1rem;
-  }
-  .hero-section .container .hero .profilePic #profile {
-    position: absolute;
-    left: auto;
-    transform: translate(0);
-    right: 0;
-    top: 18rem;
-    width: 18rem;
-    height: auto;
-    border-radius: 0;
   }
   .hero-section .container .hero #open_shell_img img {
     width: 20%;
@@ -521,6 +501,7 @@ html .personal, html .technical, body .personal, body .technical {
 }
 @media (min-width: 992px) {
   .hero-section .container .hero {
+    padding-block: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -529,7 +510,8 @@ html .personal, html .technical, body .personal, body .technical {
   .hero-section .container .hero #quote {
     font-size: 1.5rem;
     text-align: center;
-    margin: 1rem 2rem;
+    margin: 0 2rem;
+    margin-top: -3rem;
   }
   .hero-section .container .hero #quote h4 {
     font-size: 3rem;
@@ -537,23 +519,11 @@ html .personal, html .technical, body .personal, body .technical {
     margin: 20px 0;
   }
   .hero-section .container .hero #quote h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 2rem;
     text-align: center;
+    font-weight: 700;
     margin: 20px 0;
     color: #194a7a;
-  }
-  .hero-section .container .hero .profilePic {
-    margin-bottom: 1rem;
-  }
-  .hero-section .container .hero .profilePic #profile {
-    position: absolute;
-    right: 0;
-    top: 12rem;
-    width: 20rem;
-    height: auto;
-    border-radius: 0;
   }
   .hero-section .container .hero #open_shell_img img {
     width: 25%;
@@ -699,9 +669,9 @@ html .personal, html .technical, body .personal, body .technical {
   .personal .container .personal-info #BioImage {
     grid-column: 1;
     display: block;
-    width: 60%;
+    width: 70%;
     height: auto;
-    border-radius: 0;
+    border-radius: 100%;
   }
   .personal .container .personal-info .personal-text p {
     grid-column: 2;
@@ -796,7 +766,7 @@ html .personal, html .technical, body .personal, body .technical {
   color: #000000;
 }
 .projects .container .project-grid .project-card:hover {
-  transform: translateY(-5px);
+  transition: color 0.5s ease;
 }
 .projects .container .project-grid .project-card h3 {
   min-height: 3rem;
@@ -819,6 +789,8 @@ html .personal, html .technical, body .personal, body .technical {
 .projects .container .project-grid .project-card .buttons .live {
   background-color: #194a7a;
   color: #D1DBE4 !important;
+  border: 1px solid #a3b7ca;
+  transition: color 0.3s ease;
   color: #000000;
   border-radius: 5px;
   padding: 10px 20px;
@@ -826,32 +798,36 @@ html .personal, html .technical, body .personal, body .technical {
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
+  transition: color 0.5s ease;
 }
 .projects .container .project-grid .project-card .buttons .live:hover {
-  border: 1px solid #194a7a;
   background-color: #a3b7ca;
+  border: 1px solid #194a7a;
   color: #000000 !important;
 }
 .projects .container .project-grid .project-card .buttons .live:hover {
-  transform: translateY(-5px);
+  transition: color 0.3s ease;
 }
 .projects .container .project-grid .project-card .buttons .read-more {
   border: 1px solid #194a7a;
   background-color: #a3b7ca;
   color: #000000;
+  transition: color 0.3s ease;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
+  transition: color 0.5s ease;
 }
 .projects .container .project-grid .project-card .buttons .read-more:hover {
+  border: 1px solid #194a7a;
   background-color: #194a7a;
   color: #D1DBE4;
 }
 .projects .container .project-grid .project-card .buttons .read-more:hover {
-  transform: translateY(-5px);
+  transition: color 0.3s ease;
 }
 @media (min-width: 768px) {
   .projects .container {
@@ -1009,7 +985,6 @@ html .personal, html .technical, body .personal, body .technical {
 }
 
 .contact {
-  padding-block: 8rem;
   margin-top: -4rem;
   background-image: url("/Assets/Images/BG_Contact.png");
   background-position: center;
@@ -1017,43 +992,158 @@ html .personal, html .technical, body .personal, body .technical {
   background-size: cover;
 }
 .contact .container {
-  display: flex;
-  flex-direction: column;
+  padding-block: 8rem;
+  display: block;
   align-items: center;
+  text-align: center;
 }
-@media (min-width: 576px) {
-  .contact .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.contact .container h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 3rem;
+}
+.contact .container .contact-form {
+  margin: 2% auto;
+  width: 95%;
+  background-color: #194a7a;
+  color: #000000;
+  box-shadow: 0 6px 10px #000000;
+  margin: 5% auto;
+  padding: 20px 10px;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+}
+.contact .container .contact-form label {
+  color: #D1DBE4;
+}
+.contact .container .contact-form input, .contact .container .contact-form textarea {
+  background-color: #a3b7ca;
+  color: #000000;
+  border: 1px solid #194a7a;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact .container .contact-form input:focus, .contact .container .contact-form textarea:focus {
+  border-color: #194a7a;
+  outline: none;
+}
+.contact .container .contact-form label {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+.contact .container .contact-form input, .contact .container .contact-form text {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.contact .container .contact-form textarea {
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+}
+.contact .container .contact-form button {
+  background-color: #194a7a;
+  color: #D1DBE4 !important;
+  border: 1px solid #a3b7ca;
+  transition: color 0.3s ease;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 200px;
+}
+.contact .container .contact-form button:hover {
+  background-color: #a3b7ca;
+  border: 1px solid #194a7a;
+  color: #000000 !important;
+}
+.contact .container .contact-form button:hover {
+  transition: color 0.3s ease;
+}
+.contact .container .contact-form button:hover {
+  transition: color 0.3s ease;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  background-color: #C6A76F !important;
+}
+.contact .container .contact-form h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin: 20px 0;
+  color: #C6A76F;
+  margin-bottom: 1rem;
+}
+.contact .container .contact-links {
+  margin-top: 4rem;
+}
+.contact .container .contact-links a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+.contact .container .contact-links a:hover {
+  color: #C6A76F;
 }
 @media (min-width: 768px) {
   .contact .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    padding-block: 12rem;
   }
 }
 @media (min-width: 992px) {
   .contact .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding-block: 15rem;
+    padding-block: 8rem;
+    display: block;
     align-items: center;
+    text-align: center;
+  }
+  .contact .container h4 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 3rem;
+  }
+  .contact .container .contact-form {
+    margin: 2% auto;
+    width: 40%;
+  }
+  .contact .container .contact-form h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 20px 0;
+    color: #C6A76F;
+    margin-bottom: 1rem;
+  }
+  .contact .container .contact-links {
+    margin-top: 4rem;
+  }
+  .contact .container .contact-links a {
+    margin: 0 1rem;
+    font-size: 4rem;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  .contact .container .contact-links a:hover {
+    color: #C6A76F;
   }
 }
-@media (min-width: 1200px) {
-  .contact .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -1129,7 +1219,9 @@ html .personal, html .technical, body .personal, body .technical {
 .technical .container .technical-info .technical-group p {
   font-size: 2rem;
   text-align: center;
+  font-weight: 700;
   margin: 20px 0;
+  color: #194a7a;
   margin-bottom: 1rem;
 }
 .technical .container .technical-info .technical-group #html-logo {
