@@ -455,6 +455,9 @@ html .personal, html .technical, body .personal, body .technical {
   margin: 20px 0;
   color: #194a7a;
 }
+.hero-section .container .hero #open_shell_img {
+  display: none;
+}
 .hero-section .container .hero #open_shell_img img {
   width: 9rem;
   height: auto;
@@ -489,6 +492,9 @@ html .personal, html .technical, body .personal, body .technical {
     font-weight: 700;
     margin: 20px 0;
     color: #194a7a;
+  }
+  .hero-section .container .hero #open_shell_img {
+    display: block;
   }
   .hero-section .container .hero #open_shell_img img {
     width: 20%;
@@ -595,14 +601,22 @@ html .personal, html .technical, body .personal, body .technical {
   border: 3px solid #194a7a;
   background-color: #D1DBE4;
   padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
-.personal .container .personal-info img {
-  display: none;
+.personal .container .personal-info #BioImage {
+  grid-column: 1;
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border-radius: 100%;
 }
 .personal .container .personal-info p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .personal .container {
@@ -669,7 +683,7 @@ html .personal, html .technical, body .personal, body .technical {
   .personal .container .personal-info #BioImage {
     grid-column: 1;
     display: block;
-    width: 70%;
+    width: 75%;
     height: auto;
     border-radius: 100%;
   }

@@ -18,13 +18,20 @@
                 border: 3px solid #194a7a;
                 background-color: #D1DBE4;
                 padding: 2rem;
-
-                img{
-                    display: none;
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+                #BioImage{
+                    grid-column: 1;
+                    display: block;
+                    width: 60%;
+                    height: auto;
+                    margin: auto;
+                    border-radius: 100%;
                 }
 
                 p{
                     @include text;
+                    margin-top: 1rem;
                 }
             }
 
@@ -93,7 +100,7 @@
                 #BioImage{
                     grid-column: 1;
                     display: block;
-                    width: 70%;
+                    width: 75%;
                     height: auto;
                     border-radius: 100%;
 
