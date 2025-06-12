@@ -2,88 +2,95 @@
 @import "_typography.scss";
 @import "_components.scss";
 
-.contact{
+.contact {
     margin-top: -4rem;
     background-image: url("/Assets/Images/BG_Contact.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .container{
+
+    .container {
         @include xs {
             padding-block: 8rem;
-            display: block;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             text-align: center;
 
-            h4{
+            h4 {
                 @include title_big;
                 margin-bottom: 3rem;
             }
-            .contact-form{
-                margin: 2% auto; // Reduce margins for smaller screens
-                width: 95%;
-                @include contact_form;
-                h5{
-                    @include title_small;
-                    margin-bottom: 1rem;
 
+            .contact-info-box {
+                background-color: rgba(255, 255, 255, 0.6);
+                padding: 3rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 90%;
+                margin: 0 auto;
+
+                p {
+                    @include text;
+                    margin-bottom: 1.5rem;
+                }
+
+                .contact-links {
+                    margin-top: 2rem;
+
+                    a {
+                        margin: 0 1rem;
+                        font-size: 2rem;
+                        @include icon_color;
+                    }
                 }
             }
-            .contact-links{
-                margin-top: 4rem;
-
-                a{
-                    margin: 0 1rem;
-                    font-size: 2rem;
-                    @include icon_color;
-                }
-            }
-
         }
+
         @include sm {
-
+            // Additional styles for small screens if needed
         }
+
         @include md {
             padding-block: 12rem;
 
+            .contact-info-box {
+                width: 70%;
+            }
         }
+
         @include lg {
             padding-block: 15rem;
-            padding-block: 8rem;
-            display: block;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             text-align: center;
 
-            h4{
+            h4 {
                 @include title_big;
                 margin-bottom: 3rem;
             }
-            .contact-form{
-                margin: 2% auto;
-                width: 40%;
 
-                h5{
-                    @include title_small;
-                    margin-bottom: 1rem;
+            .contact-info-box {
+                width: 50%;
 
+                p {
+                    margin-bottom: 1.5rem;
+                }
+
+                .contact-links {
+                    margin-top: 2rem;
+
+                    a {
+                        margin: 0 1rem;
+                        font-size: 3rem;
+                        @include icon_color;
+                    }
                 }
             }
-
-            .contact-links{
-
-                margin-top: 4rem;
-
-                a{
-                    margin: 0 1rem;
-                    font-size: 4rem;
-                    @include icon_color;
-                }
-            }
-
         }
-        @include xl {
 
+        @include xl {
         }
     }
-    
 }
