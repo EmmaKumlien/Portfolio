@@ -912,6 +912,7 @@ html .personal, html .technical, body .personal, body .technical {
 }
 
 .testimonials {
+  display: none;
   padding-block: 8rem;
 }
 .testimonials .container {
