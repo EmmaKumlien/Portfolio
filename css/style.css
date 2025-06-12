@@ -1164,7 +1164,7 @@ html .personal, html .technical, body .personal, body .technical {
   .technical .container .technical-info .scroll-wrapper {
     display: flex;
     gap: 6rem;
-    animation: scroll 20s linear infinite;
+    animation: scroll 30s linear infinite;
   }
   .technical .container .technical-info .scroll-wrapper .technical-group {
     display: flex;
@@ -1184,6 +1184,6 @@ html .personal, html .technical, body .personal, body .technical {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }

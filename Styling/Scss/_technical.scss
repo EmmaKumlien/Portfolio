@@ -134,7 +134,7 @@
                 .scroll-wrapper{
                     display: flex;
                     gap: 6rem;
-                    animation: scroll 20s linear infinite; // Animation för infinite scroll
+                    animation: scroll 30s linear infinite; // Animation för infinite scroll
                     
                     .technical-group{
                         display: flex;
@@ -161,6 +161,6 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }

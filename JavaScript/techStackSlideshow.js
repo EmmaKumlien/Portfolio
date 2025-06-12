@@ -1,33 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
     const scrollWrapper = document.querySelector(".scroll-wrapper");
+    let isContentDuplicated = false; // Track if content is already duplicated
 
-    const handleResize = () => {
+    const toggleAnimation = () => {
         if (scrollWrapper) {
             if (window.innerWidth >= 767) {
-                if (!scrollWrapper.dataset.duplicated) {
-                    const cloneContent = scrollWrapper.innerHTML;
-                    scrollWrapper.insertAdjacentHTML("beforeend", cloneContent);
-                    scrollWrapper.dataset.duplicated = "true"; // Markera att duplicering har skett
+                // Enable animation for larger screens
+                if (!isContentDuplicated) {
+                    const items = Array.from(scrollWrapper.children);
+                    const wrapperWidth = scrollWrapper.offsetWidth;
+
+                    // Duplicate content until it fills at least twice the wrapper's width
+                    let totalContentWidth = scrollWrapper.scrollWidth;
+                    while (totalContentWidth < wrapperWidth * 2) {
+                        items.forEach((item) => {
+                            const clone = item.cloneNode(true);
+                            scrollWrapper.appendChild(clone);
+                        });
+                        totalContentWidth = scrollWrapper.scrollWidth; // Recalculate total width
+                    }
+
+                    isContentDuplicated = true; // Mark content as duplicated
                 }
-                scrollWrapper.style.animation = ""; // Återaktivera animation
+                const totalScrollWidth = scrollWrapper.scrollWidth;
+                const animationDuration = totalScrollWidth / 50; // Adjust speed dynamically
+                scrollWrapper.style.animation = `scroll ${animationDuration}s linear infinite`;
             } else {
-                // För mindre skärmar, ta bort duplicerade element
-                if (scrollWrapper.dataset.duplicated) {
-                    const originalContent = scrollWrapper.innerHTML.slice(
+                // Disable animation and remove duplicates for smaller screens
+                scrollWrapper.style.animation = "none";
+                if (isContentDuplicated) {
+                    const originalContent = Array.from(scrollWrapper.children).slice(
                         0,
-                        scrollWrapper.innerHTML.length / 2
+                        scrollWrapper.children.length / 2
                     );
-                    scrollWrapper.innerHTML = originalContent;
-                    delete scrollWrapper.dataset.duplicated; // Ta bort markeringen
+                    scrollWrapper.innerHTML = ""; // Clear all content
+                    originalContent.forEach((item) => scrollWrapper.appendChild(item)); // Restore original content
+                    isContentDuplicated = false; // Mark content as not duplicated
                 }
-                scrollWrapper.style.animation = "none"; // Inaktivera animation
             }
         }
     };
 
-    // Kör vid sidladdning
-    handleResize();
+    // Initial check
+    toggleAnimation();
 
-    // Lyssna på fönstrets storleksändring
-    window.addEventListener("resize", handleResize);
+    // Add event listener for screen resizing
+    window.addEventListener("resize", toggleAnimation);
 });
