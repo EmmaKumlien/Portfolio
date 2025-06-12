@@ -7,7 +7,9 @@
 @mixin title_medium {
   font-size: 2rem;
   text-align: center;
+  font-weight: 700;
   margin: 20px 0;
+  color: #194a7a;
 }
 
 @mixin title_small {
@@ -16,7 +18,7 @@
   line-height: 1.2;
   text-align: center;
   margin: 20px 0;
-  color: #194a7a;
+  color: #C6A76F;
 }
 
 @mixin text{
