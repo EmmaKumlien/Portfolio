@@ -122,9 +122,9 @@ html .personal, html .technical, body .personal, body .technical {
   height: auto;
 }
 .header .container .navigation .navigationLinks {
-  display: none; /* Default state: hidden */
+  display: none;
   position: absolute;
-  top: 100%; /* Adjust as needed */
+  top: 100%;
   right: 0;
   background-color: #5D7B9D;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
