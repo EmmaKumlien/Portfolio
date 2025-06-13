@@ -414,7 +414,7 @@ html .personal, html .technical, body .personal, body .technical {
 .hero-section {
   position: relative;
   margin-bottom: -3rem;
-  background-image: url("/Images/BG_Contact.png");
+  background-image: url("./Images/BG_Contact.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -902,7 +902,7 @@ html .personal, html .technical, body .personal, body .technical {
 
 .contact {
   margin-top: -4rem;
-  background-image: url("/Images/BG_Contact.png");
+  background-image: url("./Images/BG_Contact.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1128,10 +1128,10 @@ html .personal, html .technical, body .personal, body .technical {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, purple, rgb(203, 136, 245));
-  -webkit-mask-image: url("/Assets/Images/csharp-logo-transparent-text.svg");
+  -webkit-mask-image: url("./Images/csharp-logo-transparent-text.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  mask-image: url("/Assets/Images/csharp-logo-transparent-text.svg");
+  mask-image: url("./Images/csharp-logo-transparent-text.svg");
   mask-repeat: no-repeat;
   mask-size: contain;
   display: inline-block;
