@@ -1,10 +1,11 @@
 @import "_base.scss";
 @import "_typography.scss";
 @import "_components.scss";
+$bg-image: "/Images/BG_Contact.png";
 
 .contact {
     margin-top: -4rem;
-    background-image: url("./Images/BG_Contact.png");
+    background-image: url(#{$bg-image});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
