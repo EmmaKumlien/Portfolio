@@ -760,8 +760,9 @@ html .personal, html .technical, body .personal, body .technical {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-align: center;
+  align-items: center;
 }
 .projects .container .project-grid .project-card:hover {
   background-color: #C6A76F;
@@ -771,14 +772,26 @@ html .personal, html .technical, body .personal, body .technical {
   transition: color 0.5s ease;
 }
 .projects .container .project-grid .project-card h3 {
-  min-height: 3rem;
+  font-size: 1.4rem;
+  min-height: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.projects .container .project-grid .project-card img {
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  margin-block: 1rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: transform 0.3s ease;
+}
+.projects .container .project-grid .project-card img:hover {
+  transform: scale(3);
 }
 .projects .container .project-grid .project-card .tags {
   background-color: inherit;
   color: #000000;
-  margin-top: 3rem;
 }
 .projects .container .project-grid .project-card .buttons {
   display: flex;
@@ -836,10 +849,22 @@ html .personal, html .technical, body .personal, body .technical {
     padding-block: 12rem;
   }
   .projects .container h4 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 20px 0;
     margin-bottom: 5rem;
+  }
+  .projects .container .project-grid .project-card h3 {
+    max-height: 4rem;
+  }
+  .projects .container .project-grid .project-card img {
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    margin-block: 1rem;
+    -o-object-fit: fill;
+       object-fit: fill;
+    transition: transform 0.3s ease;
+  }
+  .projects .container .project-grid .project-card img:hover {
+    transform: scale(3);
   }
 }
 @media (min-width: 992px) {
@@ -847,9 +872,6 @@ html .personal, html .technical, body .personal, body .technical {
     padding-block: 15rem;
   }
   .projects .container h4 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 20px 0;
     margin-bottom: 6rem;
   }
 }

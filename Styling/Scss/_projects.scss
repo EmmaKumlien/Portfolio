@@ -30,17 +30,30 @@
                     flex-direction: column;
                     justify-content: space-between;
                     height: 100%; 
-                    padding: 2rem;
+                    padding: 1rem 2rem;
                     text-align: center;
+                    align-items: center;
 
                     h3{
-                        min-height: 3rem;
+                        font-size: 1.4rem;
+                        min-height: 2rem;
                         overflow: hidden; 
                         text-overflow: ellipsis;
                     }
+                    img{
+                        border-radius: 100%;
+                        width: 4rem;
+                        height: 4rem;
+                        margin-block: 1rem;
+                        object-fit: fill;
+                        transition: transform 0.3s ease; 
+
+                        &:hover{
+                            transform: scale(3);
+                        }
+                    }
                     .tags{
                         @include tag_color;
-                        margin-top: 3rem;
                     }
                     .buttons{
                         display: flex;
@@ -66,15 +79,33 @@
         @include md {
             padding-block: 12rem;
             h4{
-                @include title_big;
                 margin-bottom: 5rem;
+            }
+
+            .project-grid{
+                .project-card{
+                    h3{
+                        max-height: 4rem;
+                    }
+                    img{
+                        border-radius: 100%;
+                        width: 6rem;
+                        height: 6rem;
+                        margin-block: 1rem;
+                        object-fit: fill;
+                        transition: transform 0.3s ease; 
+
+                        &:hover{
+                            transform: scale(3);
+                        }
+                    }
+                }
             }
             
         }
         @include lg {
             padding-block: 15rem;
             h4{
-                @include title_big;
                 margin-bottom: 6rem;
             }
            
