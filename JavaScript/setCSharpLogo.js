@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cSharpLogo = document.getElementById("cSharp-logo");
     if (cSharpLogo) {
         console.log("C# logo element found");
-        const imagePath = "./Images/csharp_logo_transparent_text.svg";
+        const imagePath = "./Images/CSharp_logo.png";
         cSharpLogo.style.backgroundImage = `url("${imagePath}")`;
         cSharpLogo.style.backgroundSize = "contain";
         cSharpLogo.style.backgroundRepeat = "no-repeat";

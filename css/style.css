@@ -1126,12 +1126,6 @@ html .personal, html .technical, body .personal, body .technical {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, purple, rgb(203, 136, 245));
-  -webkit-mask-image: url("/Images/csharp_logo_transparent_text.svg");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-image: url("/Images/csharp_logo_transparent_text.svg");
-  mask-repeat: no-repeat;
-  mask-size: contain;
   display: inline-block;
   text-align: center;
 }
