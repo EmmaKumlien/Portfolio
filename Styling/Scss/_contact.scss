@@ -116,10 +116,9 @@
                 }
     
                 .contact-info-box {
-                    background-color: rgba(255, 255, 255, 0.6);
+                    background-color: rgba(67, 61, 138, 0.4);
                     padding: 3rem;
                     border-radius: 10px;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                     width: 90%;
                     margin: 0 auto;
     
@@ -134,7 +133,7 @@
                         a {
                             margin: 0 1rem;
                             font-size: 2rem;
-                            @include icon_color;
+                            @include icon_color_dark;
                         }
                     }
                 }
@@ -176,7 +175,7 @@
                         a {
                             margin: 0 1rem;
                             font-size: 3rem;
-                            @include icon_color;
+                            @include icon_color_dark;
                         }
                     }
                 }

@@ -1240,10 +1240,6 @@ html .wrapper .footer, body .wrapper .footer {
 .lightmode .projects .container .project-grid .project-card img:hover {
   transform: scale(3);
 }
-.lightmode .projects .container .project-grid .project-card .tags {
-  background-color: inherit;
-  color: #000000;
-}
 .lightmode .projects .container .project-grid .project-card .buttons {
   display: flex;
   justify-content: space-evenly;
@@ -1347,9 +1343,8 @@ html .wrapper .footer, body .wrapper .footer {
   gap: 2rem;
 }
 .darkmode .projects .container .project-grid .project-card {
-  background-color: #4A5A6A;
-  color: #000000;
-  box-shadow: 0 6px 10px #000000;
+  background-color: #2E236C;
+  color: #ffffff;
   border-radius: 10px;
   padding: 30px 25px;
   text-align: center;
@@ -1363,8 +1358,8 @@ html .wrapper .footer, body .wrapper .footer {
   align-items: center;
 }
 .darkmode .projects .container .project-grid .project-card:hover {
-  background-color: #C6A76F;
-  color: #000000;
+  background-color: #433D8B;
+  color: #ffffff;
 }
 .darkmode .projects .container .project-grid .project-card:hover {
   transition: color 0.5s ease;
@@ -1387,10 +1382,6 @@ html .wrapper .footer, body .wrapper .footer {
 .darkmode .projects .container .project-grid .project-card img:hover {
   transform: scale(3);
 }
-.darkmode .projects .container .project-grid .project-card .tags {
-  background-color: inherit;
-  color: #000000;
-}
 .darkmode .projects .container .project-grid .project-card .buttons {
   display: flex;
   justify-content: space-evenly;
@@ -1400,11 +1391,10 @@ html .wrapper .footer, body .wrapper .footer {
   margin-top: 1rem;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .live {
-  background-color: #194a7a;
-  color: #D1DBE4 !important;
-  border: 1px solid #a3b7ca;
-  transition: color 0.3s ease;
+  border: 1px solid #ffffff;
+  background-color: #C8ACD6;
   color: #000000;
+  transition: color 0.3s ease;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -1414,16 +1404,16 @@ html .wrapper .footer, body .wrapper .footer {
   transition: color 0.5s ease;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .live:hover {
-  background-color: #a3b7ca;
-  border: 1px solid #194a7a;
-  color: #000000 !important;
+  border: 1px solid #ffffff;
+  background-color: #2E236C;
+  color: #ffffff;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .live:hover {
   transition: color 0.3s ease;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .read-more {
-  border: 1px solid #194a7a;
-  background-color: #a3b7ca;
+  border: 1px solid #ffffff;
+  background-color: #C8ACD6;
   color: #000000;
   transition: color 0.3s ease;
   border-radius: 5px;
@@ -1435,9 +1425,9 @@ html .wrapper .footer, body .wrapper .footer {
   transition: color 0.5s ease;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .read-more:hover {
-  border: 1px solid #194a7a;
-  background-color: #194a7a;
-  color: #D1DBE4;
+  border: 1px solid #ffffff;
+  background-color: #2E236C;
+  color: #ffffff;
 }
 .darkmode .projects .container .project-grid .project-card .buttons .read-more:hover {
   transition: color 0.3s ease;
@@ -1631,10 +1621,9 @@ html .wrapper .footer, body .wrapper .footer {
   margin-bottom: 3rem;
 }
 .darkmode .contact .container .contact-info-box {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(67, 61, 138, 0.4);
   padding: 3rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
   margin: 0 auto;
 }
@@ -1650,11 +1639,11 @@ html .wrapper .footer, body .wrapper .footer {
 .darkmode .contact .container .contact-info-box .contact-links a {
   margin: 0 1rem;
   font-size: 2rem;
-  color: #000000;
+  color: #C8ACD6;
   transition: color 0.3s ease;
 }
 .darkmode .contact .container .contact-info-box .contact-links a:hover {
-  color: #C6A76F;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .darkmode .contact .container {
@@ -1690,11 +1679,11 @@ html .wrapper .footer, body .wrapper .footer {
   .darkmode .contact .container .contact-info-box .contact-links a {
     margin: 0 1rem;
     font-size: 3rem;
-    color: #000000;
+    color: #C8ACD6;
     transition: color 0.3s ease;
   }
   .darkmode .contact .container .contact-info-box .contact-links a:hover {
-    color: #C6A76F;
+    color: #ffffff;
   }
 }
 * {

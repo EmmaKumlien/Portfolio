@@ -47,6 +47,17 @@ $four: #C8ACD6;
   }
 }
 
+
+@mixin component_color_dark{
+  background-color: $dark-hover-color;
+  color: $dark-text;
+
+  &:hover {
+    background-color: $three;
+    color: $dark-text;
+  }
+}
+
 @mixin button_primary_color {
   background-color: $primary-button-color;
   color: $primary-color !important;
@@ -86,11 +97,6 @@ $four: #C8ACD6;
   }
 }
 
-@mixin tag_color{
-  background-color: inherit;
-  color: $text-color;
-}
-
 @mixin review_card{
   background-color: rgba($secondary-color, 0.5);;
   color: $text-color;
@@ -103,6 +109,15 @@ $four: #C8ACD6;
 
   &:hover {
     color: $hoover-color;
+  }
+}
+
+@mixin icon_color_dark{
+  color: $dark-button;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $dark-text;
   }
 }
 
