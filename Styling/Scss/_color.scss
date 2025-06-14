@@ -1,3 +1,4 @@
+//lightmode
 $primary-color: #D1DBE4;
 $secondary-color: #5D7B9D;
 $hoover-color:  #C6A76F;
@@ -6,6 +7,13 @@ $primary-button-color: #194a7a;
 $secondary-button-color: #a3b7ca;
 $button-hover-color: #194a7a;
 $text-color: #000000;
+
+//darkmode
+$dark-background: #000000;
+$dark-text:#ffffff;
+$dark-button: rgb(247, 4, 247);
+$dark-hover-color: rgb(83, 2, 83);
+
 
 @mixin background_primary {
   background-color: $primary-color;
@@ -17,9 +25,9 @@ $text-color: #000000;
   color: $text-color;
 }
 
-@mixin primary_darkmode_background {
-  background-color: #194a7a;
-  color: $primary-color;
+@mixin background_dark {
+  background-color: $text-color;
+  color: $dark-text;
 }
 
 @mixin component_color{
@@ -56,6 +64,19 @@ $text-color: #000000;
     border: 1px solid $primary-button-color;
     background-color: $button-hover-color;
     color: $primary-color;
+  }
+}
+
+@mixin darkmode_button{
+  border: 1px solid $dark-text;
+  background-color: $dark-button;
+  color: $text-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    border: 1px solid $dark-text;
+    background-color: $dark-hover-color;
+    color: $dark-text;
   }
 }
 
@@ -109,6 +130,16 @@ $text-color: #000000;
     &:hover {
       color: $hoover-color;
       background-color: $secondary-color;
+    }
+  }
+}
+
+@mixin dark_navigation_color{
+  a{
+    color: $dark-text;
+    &:hover {
+      color: $dark-text;
+      background-color: $dark-hover-color;
     }
   }
 }

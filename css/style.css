@@ -12,9 +12,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -33,15 +48,6 @@ html .wrapper .main, body .wrapper .main {
 }
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
-}
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
 * {
@@ -58,9 +64,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -80,23 +101,14 @@ html .wrapper .main, body .wrapper .main {
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
 
-.header {
+.lightmode .header {
   padding: 2rem 0;
 }
-.header .container {
+.lightmode .header .container {
   position: relative;
 }
-.header .container #menuBar {
+.lightmode .header .container #menuBar {
   display: block;
   position: absolute;
   top: 10%;
@@ -104,24 +116,27 @@ html .personal, html .technical, body .personal, body .technical {
   font-size: 2rem;
   cursor: pointer;
 }
-.header .container .navigation {
+.lightmode .header .container .navigation {
   display: block;
 }
-.header .container .navigation .logo #home-btn {
+.lightmode .header .container .navigation .logo #home-btn {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-.header .container .navigation .logo #home-btn #logoImage {
+.lightmode .header .container .navigation .logo #home-btn #logoImage {
   width: 4rem;
   height: auto;
 }
-.header .container .navigation .logo #home-btn #logoText {
+.lightmode .header .container .navigation .logo #home-btn #logoText {
   width: 6rem;
   height: auto;
 }
-.header .container .navigation .navigationLinks {
+.lightmode .header .container .navigation .logo #home-btn #logodark {
+  display: none;
+}
+.lightmode .header .container .navigation .navigationLinks {
   display: none;
   position: absolute;
   top: 100%;
@@ -130,42 +145,69 @@ html .personal, html .technical, body .personal, body .technical {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
-.header .container .navigation .navigationLinks a {
+.lightmode .header .container .navigation .navigationLinks #toggle-theme {
+  background-color: #194a7a;
+  color: #D1DBE4 !important;
+  border: 1px solid #a3b7ca;
+  transition: color 0.3s ease;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  padding: 0.2rem 0.2rem !important;
+  font-size: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1rem 1rem;
+}
+.lightmode .header .container .navigation .navigationLinks #toggle-theme:hover {
+  background-color: #a3b7ca;
+  border: 1px solid #194a7a;
+  color: #000000 !important;
+}
+.lightmode .header .container .navigation .navigationLinks #toggle-theme:hover {
+  transition: color 0.3s ease;
+}
+.lightmode .header .container .navigation .navigationLinks a {
   display: block;
 }
-.header .container .navigation .navigationLinks a i {
+.lightmode .header .container .navigation .navigationLinks a i {
   margin-right: 0.5rem;
 }
-.header .container .navigation .navigationLinks.active {
+.lightmode .header .container .navigation .navigationLinks.active {
   display: block;
   align-items: flex-start;
   text-align: left;
   padding: 0.5rem;
   border-radius: 25px;
 }
-.header .container .navigation .navigationLinks.active a {
+.lightmode .header .container .navigation .navigationLinks.active a {
   color: #000000;
 }
-.header .container .navigation .navigationLinks.active a:hover {
+.lightmode .header .container .navigation .navigationLinks.active a:hover {
   color: #C6A76F;
   background-color: #5D7B9D;
 }
-.header .container .navigation .navigationLinks.active a {
+.lightmode .header .container .navigation .navigationLinks.active a {
   text-decoration: none;
   padding: 15px 20px;
   border-radius: 25px;
   font-size: 1.05rem;
 }
-.header .container .navigation .navigationLinks.active a:hover {
+.lightmode .header .container .navigation .navigationLinks.active a:hover {
   transition: color 0.3s ease;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
-.header .container .navigation .navigationLinks.active a i {
+.lightmode .header .container .navigation .navigationLinks.active a i {
   margin: 0.5rem 0 0 0.5rem;
 }
 @media (min-width: 768px) {
-  .header .container #menuBar {
+  .lightmode .header .container #menuBar {
     display: block;
     position: absolute;
     top: 10%;
@@ -173,70 +215,58 @@ html .personal, html .technical, body .personal, body .technical {
     font-size: 2rem;
     cursor: pointer;
   }
-  .header .container .navigation {
+  .lightmode .header .container .navigation {
     display: block;
   }
-  .header .container .navigation .logo #home-btn {
+  .lightmode .header .container .navigation .logo #home-btn {
     width: -moz-fit-content;
     width: fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
-  .header .container .navigation .logo #home-btn #logoImage {
+  .lightmode .header .container .navigation .logo #home-btn #logoImage {
     width: 4rem;
     height: auto;
   }
-  .header .container .navigation .logo #home-btn #logoText {
+  .lightmode .header .container .navigation .logo #home-btn #logoText {
     width: 6rem;
     height: auto;
   }
-  .header .container .navigation .navigationLinks {
+  .lightmode .header .container .navigation .navigationLinks {
     display: none;
     align-items: center;
     padding: 0.5rem;
   }
-  .header .container .navigation .navigationLinks .menuLinks {
+  .lightmode .header .container .navigation .navigationLinks .menuLinks {
     height: -moz-fit-content;
     height: fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .header .container .navigation .navigationLinks .menuLinks a {
+  .lightmode .header .container .navigation .navigationLinks .menuLinks a {
     margin: 0.5rem 0;
     text-decoration: none;
     padding: 0.5rem !important;
   }
-  .header .container .navigation .navigationLinks .menuLinks a i {
+  .lightmode .header .container .navigation .navigationLinks .menuLinks a i {
     margin-right: 0.5rem;
   }
 }
 @media (min-width: 992px) {
-  .header .container #menuBar {
+  .lightmode .header .container #menuBar {
     display: none;
   }
-  .header .container .navigation {
+  .lightmode .header .container .navigation {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     width: 100%;
   }
-  .header .container .navigation .logo {
+  .lightmode .header .container .navigation .logo {
     z-index: 2000;
   }
-  .header .container .navigation .logo #home-btn {
-    width: auto;
-    height: auto;
-  }
-  .header .container .navigation .logo #home-btn #logoImage {
-    width: 4rem;
-    height: auto;
-  }
-  .header .container .navigation .logo #home-btn #logoText {
-    width: 6rem;
-    height: auto;
-  }
-  .header .container .navigation .navigationLinks {
+  .lightmode .header .container .navigation .navigationLinks {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -249,46 +279,237 @@ html .personal, html .technical, body .personal, body .technical {
     flex-direction: row;
     z-index: 0;
   }
-  .header .container .navigation .navigationLinks a {
+  .lightmode .header .container .navigation .navigationLinks a {
     color: #000000;
   }
-  .header .container .navigation .navigationLinks a:hover {
+  .lightmode .header .container .navigation .navigationLinks a:hover {
     color: #C6A76F;
     background-color: #5D7B9D;
   }
-  .header .container .navigation .navigationLinks a {
+  .lightmode .header .container .navigation .navigationLinks a {
     text-decoration: none;
     padding: 15px 20px;
     border-radius: 25px;
     font-size: 1.05rem;
   }
-  .header .container .navigation .navigationLinks a:hover {
+  .lightmode .header .container .navigation .navigationLinks a:hover {
     transition: color 0.3s ease;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
-  .header .container .navigation .navigationLinks a i {
+  .lightmode .header .container .navigation .navigationLinks a i {
     margin: 0.5rem 0 0 0.5rem;
   }
-  .header .container .navigation .navigationLinks .menuLinks {
+  .lightmode .header .container .navigation .navigationLinks .menuLinks {
     display: flex;
   }
-  .header .container .navigation .navigationLinks a.active {
+  .lightmode .header .container .navigation .navigationLinks a.active {
     background-color: #5D7B9D;
     color: #C6A76F;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
   }
 }
-@media (min-width: 1200px) {
-  .header .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.darkmode .header {
+  padding: 2rem 0;
+}
+.darkmode .header .container {
+  position: relative;
+}
+.darkmode .header .container #menuBar {
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.darkmode .header .container .navigation {
+  display: block;
+}
+.darkmode .header .container .navigation .logo #home-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.darkmode .header .container .navigation .logo #home-btn #logoImage {
+  display: none;
+}
+.darkmode .header .container .navigation .logo #home-btn #logoText {
+  display: none;
+}
+.darkmode .header .container .navigation .logo #home-btn #logodark {
+  width: 4rem;
+  height: auto;
+  border-radius: 100%;
+}
+.darkmode .header .container .navigation .navigationLinks {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #6a6c6e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.darkmode .header .container .navigation .navigationLinks #toggle-theme {
+  border: 1px solid #ffffff;
+  background-color: rgb(247, 4, 247);
+  color: #000000;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  padding: 0.2rem 0.2rem !important;
+  font-size: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1rem 1rem;
+}
+.darkmode .header .container .navigation .navigationLinks #toggle-theme:hover {
+  border: 1px solid #ffffff;
+  background-color: rgb(83, 2, 83);
+  color: #ffffff;
+}
+.darkmode .header .container .navigation .navigationLinks #toggle-theme:hover {
+  transition: color 0.3s ease;
+}
+.darkmode .header .container .navigation .navigationLinks a {
+  display: block;
+}
+.darkmode .header .container .navigation .navigationLinks a i {
+  margin-right: 0.5rem;
+}
+.darkmode .header .container .navigation .navigationLinks.active {
+  display: block;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 25px;
+}
+.darkmode .header .container .navigation .navigationLinks.active a {
+  color: #ffffff;
+}
+.darkmode .header .container .navigation .navigationLinks.active a:hover {
+  color: #ffffff;
+  background-color: rgb(83, 2, 83);
+}
+.darkmode .header .container .navigation .navigationLinks.active a {
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 1.05rem;
+}
+.darkmode .header .container .navigation .navigationLinks.active a:hover {
+  transition: color 0.3s ease;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+.darkmode .header .container .navigation .navigationLinks.active a i {
+  margin: 0.5rem 0 0 0.5rem;
+}
+@media (min-width: 768px) {
+  .darkmode .header .container #menuBar {
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .darkmode .header .container .navigation {
+    display: block;
+  }
+  .darkmode .header .container .navigation .navigationLinks {
+    display: none;
     align-items: center;
+    padding: 0.5rem;
+  }
+  .darkmode .header .container .navigation .navigationLinks .menuLinks {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .darkmode .header .container .navigation .navigationLinks .menuLinks a {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    padding: 0.5rem !important;
+  }
+  .darkmode .header .container .navigation .navigationLinks .menuLinks a i {
+    margin-right: 0.5rem;
   }
 }
-
+@media (min-width: 992px) {
+  .darkmode .header .container #menuBar {
+    display: none;
+  }
+  .darkmode .header .container .navigation {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  .darkmode .header .container .navigation .logo {
+    z-index: 2000;
+  }
+  .darkmode .header .container .navigation .navigationLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    z-index: 0;
+  }
+  .darkmode .header .container .navigation .navigationLinks a {
+    color: #ffffff;
+  }
+  .darkmode .header .container .navigation .navigationLinks a:hover {
+    color: #ffffff;
+    background-color: rgb(83, 2, 83);
+  }
+  .darkmode .header .container .navigation .navigationLinks a {
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1.05rem;
+  }
+  .darkmode .header .container .navigation .navigationLinks a:hover {
+    transition: color 0.3s ease;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  .darkmode .header .container .navigation .navigationLinks a i {
+    margin: 0.5rem 0 0 0.5rem;
+  }
+  .darkmode .header .container .navigation .navigationLinks .menuLinks {
+    display: flex;
+  }
+  .darkmode .header .container .navigation .navigationLinks a.active {
+    border: 1px solid #ffffff;
+    background-color: rgb(247, 4, 247);
+    color: #000000;
+    transition: color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+  .darkmode .header .container .navigation .navigationLinks a.active:hover {
+    border: 1px solid #ffffff;
+    background-color: rgb(83, 2, 83);
+    color: #ffffff;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -303,9 +524,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -324,15 +560,6 @@ html .wrapper .main, body .wrapper .main {
 }
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
-}
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
 .footer .container {
@@ -379,9 +606,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -401,52 +643,43 @@ html .wrapper .main, body .wrapper .main {
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
 
-.hero-section {
+.lightmode .hero-section {
   position: relative;
   margin-bottom: -3rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.hero-section .container {
+.lightmode .hero-section .container {
   padding-block: 10rem;
 }
-.hero-section .container .hero {
+.lightmode .hero-section .container .hero {
   display: block;
   align-items: center;
   text-align: center;
 }
-.hero-section .container .hero #quote {
+.lightmode .hero-section .container .hero #quote {
   font-size: 1.5rem;
   text-align: center;
   margin: 1rem 0;
 }
-.hero-section .container .hero #quote h4 {
+.lightmode .hero-section .container .hero #quote h4 {
   font-size: 3rem;
   text-align: center;
   margin: 20px 0;
 }
-.hero-section .container .hero #quote h5 {
+.lightmode .hero-section .container .hero #quote h5 {
   font-size: 2rem;
   text-align: center;
   font-weight: 700;
   margin: 20px 0;
   color: #194a7a;
 }
-.hero-section .container .hero #open_shell_img {
+.lightmode .hero-section .container .hero #open_shell_img {
   display: none;
 }
-.hero-section .container .hero #open_shell_img img {
+.lightmode .hero-section .container .hero #open_shell_img img {
   width: 9rem;
   height: auto;
   position: absolute;
@@ -454,37 +687,43 @@ html .personal, html .technical, body .personal, body .technical {
   bottom: -5rem;
   z-index: 2;
 }
+.lightmode .hero-section .container .hero #quote_dark {
+  display: none;
+}
+.lightmode .hero-section .container .hero .darkmode-hero {
+  display: none;
+}
 @media (min-width: 768px) {
-  .hero-section .container {
+  .lightmode .hero-section .container {
     padding-block: 12rem;
   }
-  .hero-section .container .hero {
+  .lightmode .hero-section .container .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  .hero-section .container .hero #quote {
+  .lightmode .hero-section .container .hero #quote {
     font-size: 1.5rem;
     text-align: center;
     margin: 1rem 2rem;
   }
-  .hero-section .container .hero #quote h4 {
+  .lightmode .hero-section .container .hero #quote h4 {
     font-size: 3rem;
     text-align: center;
     margin: 20px 0;
   }
-  .hero-section .container .hero #quote h5 {
+  .lightmode .hero-section .container .hero #quote h5 {
     font-size: 2rem;
     text-align: center;
     font-weight: 700;
     margin: 20px 0;
     color: #194a7a;
   }
-  .hero-section .container .hero #open_shell_img {
+  .lightmode .hero-section .container .hero #open_shell_img {
     display: block;
   }
-  .hero-section .container .hero #open_shell_img img {
+  .lightmode .hero-section .container .hero #open_shell_img img {
     width: 20%;
     height: auto;
     position: absolute;
@@ -494,33 +733,130 @@ html .personal, html .technical, body .personal, body .technical {
   }
 }
 @media (min-width: 992px) {
-  .hero-section .container .hero {
+  .lightmode .hero-section .container .hero {
     padding-block: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  .hero-section .container .hero #quote {
+  .lightmode .hero-section .container .hero #quote {
     font-size: 1.5rem;
     text-align: center;
     margin: 0 2rem;
     margin-top: -3rem;
   }
-  .hero-section .container .hero #quote h4 {
+  .lightmode .hero-section .container .hero #quote h4 {
     font-size: 3rem;
     text-align: center;
     margin: 20px 0;
   }
-  .hero-section .container .hero #quote h5 {
+  .lightmode .hero-section .container .hero #quote h5 {
     font-size: 2rem;
     text-align: center;
     font-weight: 700;
     margin: 20px 0;
     color: #194a7a;
   }
-  .hero-section .container .hero #open_shell_img img {
+  .lightmode .hero-section .container .hero #open_shell_img img {
     width: 25%;
+    height: auto;
+  }
+}
+.darkmode .hero-section {
+  position: relative;
+  margin-bottom: -3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.darkmode .hero-section .container {
+  padding-block: 10rem;
+}
+.darkmode .hero-section .container .hero {
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+.darkmode .hero-section .container .hero #quote_dark {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.darkmode .hero-section .container .hero #quote_dark h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+.darkmode .hero-section .container .hero #quote_dark h5 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.darkmode .hero-section .container .hero .darkmode-hero .pixelArt {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+.darkmode .hero-section .container .hero .darkmode-hero .pixelArt #pixelArt_Me {
+  width: 8rem;
+  height: auto;
+}
+.darkmode .hero-section .container .hero .darkmode-hero .pixelArt #pixelArt_Cat {
+  width: 6rem;
+  height: auto;
+}
+.darkmode .hero-section .container .hero #open_shell_img {
+  display: none;
+}
+.darkmode .hero-section .container .hero #quote {
+  display: none;
+}
+@media (min-width: 768px) {
+  .darkmode .hero-section .container {
+    padding-block: 12rem;
+  }
+  .darkmode .hero-section .container .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .darkmode .hero-section .container .hero #quote-dark {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .darkmode .hero-section .container .hero {
+    padding-block: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .darkmode .hero-section .container .hero #quote-dark {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 2rem;
+    margin-top: -3rem;
+  }
+  .darkmode .hero-section .container .hero .darkmode-hero .pixelArt {
+    top: 20%;
+  }
+  .darkmode .hero-section .container .hero .darkmode-hero .pixelArt #pixelArt_Me {
+    width: 12rem;
+    height: auto;
+  }
+  .darkmode .hero-section .container .hero .darkmode-hero .pixelArt #pixelArt_Cat {
+    width: 8rem;
     height: auto;
   }
 }
@@ -538,9 +874,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -560,39 +911,30 @@ html .wrapper .main, body .wrapper .main {
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
 
-.personal {
+.lightmode .personal {
   background-color: #5D7B9D;
   color: #000000;
 }
-.personal .container {
+.lightmode .personal .container {
   padding-block: 8rem;
   display: block;
   text-align: center;
   align-items: center;
 }
-.personal .container h4 {
+.lightmode .personal .container h4 {
   font-size: 3rem;
   text-align: center;
   margin: 20px 0;
 }
-.personal .container .personal-info {
+.lightmode .personal .container .personal-info {
   border: 3px solid #194a7a;
   background-color: #D1DBE4;
   padding: 2rem;
   display: grid;
   grid-template-rows: 1fr 2fr;
 }
-.personal .container .personal-info #BioImage {
+.lightmode .personal .container .personal-info #BioImage {
   grid-column: 1;
   display: block;
   width: 60%;
@@ -600,26 +942,26 @@ html .personal, html .technical, body .personal, body .technical {
   margin: auto;
   border-radius: 100%;
 }
-.personal .container .personal-info p {
+.lightmode .personal .container .personal-info p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
   margin-top: 1rem;
 }
 @media (min-width: 768px) {
-  .personal .container {
+  .lightmode .personal .container {
     padding-block: 12rem;
     display: block;
     text-align: center;
     align-items: center;
   }
-  .personal .container h4 {
+  .lightmode .personal .container h4 {
     font-size: 3rem;
     text-align: center;
     margin: 20px 0;
     margin-bottom: 2rem;
   }
-  .personal .container .personal-info {
+  .lightmode .personal .container .personal-info {
     border: 3px solid #194a7a;
     background-color: #D1DBE4;
     padding: 3rem;
@@ -630,14 +972,14 @@ html .personal, html .technical, body .personal, body .technical {
     text-align: center;
     justify-content: center;
   }
-  .personal .container .personal-info #BioImage {
+  .lightmode .personal .container .personal-info #BioImage {
     grid-column: 1;
     display: block;
     width: 60%;
     height: auto;
     border-radius: 100%;
   }
-  .personal .container .personal-info .personal-text p {
+  .lightmode .personal .container .personal-info .personal-text p {
     grid-column: 2;
     font-size: 1.2rem;
     font-weight: 400;
@@ -645,19 +987,19 @@ html .personal, html .technical, body .personal, body .technical {
   }
 }
 @media (min-width: 992px) {
-  .personal .container {
+  .lightmode .personal .container {
     padding-block: 15rem;
     display: block;
     text-align: center;
     align-items: center;
   }
-  .personal .container h4 {
+  .lightmode .personal .container h4 {
     font-size: 3rem;
     text-align: center;
     margin: 20px 0;
     margin-bottom: 4rem;
   }
-  .personal .container .personal-info {
+  .lightmode .personal .container .personal-info {
     border: none;
     background-color: transparent;
     padding: 2rem;
@@ -668,14 +1010,116 @@ html .personal, html .technical, body .personal, body .technical {
     text-align: center;
     justify-content: center;
   }
-  .personal .container .personal-info #BioImage {
+  .lightmode .personal .container .personal-info #BioImage {
     grid-column: 1;
     display: block;
     width: 75%;
     height: auto;
     border-radius: 100%;
   }
-  .personal .container .personal-info .personal-text p {
+  .lightmode .personal .container .personal-info .personal-text p {
+    grid-column: 2;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+.darkmode .personal .container {
+  padding-block: 8rem;
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+.darkmode .personal .container h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+.darkmode .personal .container .personal-info {
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+.darkmode .personal .container .personal-info #BioImage {
+  grid-column: 1;
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border-radius: 100%;
+}
+.darkmode .personal .container .personal-info p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .darkmode .personal .container {
+    padding-block: 12rem;
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+  .darkmode .personal .container h4 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 2rem;
+  }
+  .darkmode .personal .container .personal-info {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .darkmode .personal .container .personal-info #BioImage {
+    grid-column: 1;
+    display: block;
+    width: 60%;
+    height: auto;
+    border-radius: 100%;
+  }
+  .darkmode .personal .container .personal-info .personal-text p {
+    grid-column: 2;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 992px) {
+  .darkmode .personal .container {
+    padding-block: 15rem;
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+  .darkmode .personal .container h4 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 4rem;
+  }
+  .darkmode .personal .container .personal-info {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .darkmode .personal .container .personal-info #BioImage {
+    grid-column: 1;
+    display: block;
+    width: 75%;
+    height: auto;
+    border-radius: 100%;
+  }
+  .darkmode .personal .container .personal-info .personal-text p {
     grid-column: 2;
     font-size: 1.2rem;
     font-weight: 400;
@@ -696,9 +1140,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -717,15 +1176,6 @@ html .wrapper .main, body .wrapper .main {
 }
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
-}
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
 .projects .container {
@@ -889,9 +1339,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -910,15 +1375,6 @@ html .wrapper .main, body .wrapper .main {
 }
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
-}
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
 .contact {
@@ -1021,9 +1477,24 @@ html, body {
   font-style: normal;
   line-height: 1.5;
   margin-inline: auto;
+  scroll-behavior: smooth !important;
+}
+html .lightmode, body .lightmode {
   background-color: #D1DBE4;
   color: #000000;
-  scroll-behavior: smooth !important;
+}
+html .lightmode .personal, html .lightmode .technical, body .lightmode .personal, body .lightmode .technical {
+  --mask:
+  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+html .darkmode, body .darkmode {
+  background-color: #000000;
+  color: #ffffff;
 }
 html .wrapper, body .wrapper {
   min-height: 100vh;
@@ -1043,40 +1514,31 @@ html .wrapper .main, body .wrapper .main {
 html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
-html .personal, html .technical, body .personal, body .technical {
-  --mask:
-  radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-  radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-  radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
 
-.technical {
+.lightmode .technical {
   background-color: #5D7B9D;
   color: #000000;
 }
-.technical .container {
+.lightmode .technical .container {
   padding-block: 8rem;
   display: block;
   align-items: center;
   text-align: center;
 }
-.technical .container h4 {
+.lightmode .technical .container h4 {
   font-size: 3rem;
   text-align: center;
   margin: 20px 0;
   margin-bottom: 3rem;
 }
-.technical .container .technical-info {
+.lightmode .technical .container .technical-info {
   display: flex;
   gap: 6rem;
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-.technical .container .technical-info .scroll-wrapper {
+.lightmode .technical .container .technical-info .scroll-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -1086,10 +1548,10 @@ html .personal, html .technical, body .personal, body .technical {
   overflow-x: visible;
   margin: 0 auto;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group {
   text-align: center;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group p {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group p {
   font-size: 2rem;
   text-align: center;
   font-weight: 700;
@@ -1097,7 +1559,7 @@ html .personal, html .technical, body .personal, body .technical {
   color: #194a7a;
   margin-bottom: 1rem;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group #html-logo {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group #html-logo {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, red, yellow);
@@ -1110,7 +1572,7 @@ html .personal, html .technical, body .personal, body .technical {
   display: inline-block;
   margin-left: 20px;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group #css-logo {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group #css-logo {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, rgb(39, 82, 252), rgb(71, 113, 123));
@@ -1129,7 +1591,7 @@ html .personal, html .technical, body .personal, body .technical {
   display: inline-block;
   margin-left: 20px;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group #js-logo {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group #js-logo {
   width: 100px;
   height: 100px;
   background-color: yellow;
@@ -1144,14 +1606,14 @@ html .personal, html .technical, body .personal, body .technical {
           mask-size: cover;
   display: inline-block;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group #cSharp-logo {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group #cSharp-logo {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, purple, rgb(203, 136, 245));
   display: inline-block;
   text-align: center;
 }
-.technical .container .technical-info .scroll-wrapper .technical-group #sql-logo {
+.lightmode .technical .container .technical-info .scroll-wrapper .technical-group #sql-logo {
   width: 100px;
   height: 100px;
   background-image: linear-gradient(to right, red, black);
@@ -1165,22 +1627,22 @@ html .personal, html .technical, body .personal, body .technical {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .technical .container {
+  .lightmode .technical .container {
     padding-block: 12rem;
   }
-  .technical .container .technical-info {
+  .lightmode .technical .container .technical-info {
     display: flex;
     gap: 6rem;
     overflow: hidden;
     position: relative;
     width: 100%;
   }
-  .technical .container .technical-info .scroll-wrapper {
+  .lightmode .technical .container .technical-info .scroll-wrapper {
     display: flex;
     gap: 6rem;
     animation: scroll 30s linear infinite;
   }
-  .technical .container .technical-info .scroll-wrapper .technical-group {
+  .lightmode .technical .container .technical-info .scroll-wrapper .technical-group {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1189,7 +1651,143 @@ html .personal, html .technical, body .personal, body .technical {
   }
 }
 @media (min-width: 992px) {
-  .technical .container {
+  .lightmode .technical .container {
+    padding-block: 18rem;
+  }
+}
+.darkmode .technical .container {
+  padding-block: 8rem;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+.darkmode .technical .container h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 3rem;
+}
+.darkmode .technical .container .technical-info {
+  display: flex;
+  gap: 6rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  animation: none;
+  overflow-x: visible;
+  margin: 0 auto;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group {
+  text-align: center;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group p {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #194a7a;
+  margin-bottom: 1rem;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group #html-logo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to right, red, yellow);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  display: inline-block;
+  margin-left: 20px;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group #css-logo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to right, rgb(39, 82, 252), rgb(71, 113, 123));
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M376.3 32L0 32 0 408.3c0 19 7.6 37.2 21 50.7s31.7 21 50.7 21l304.6 0c19 0 37.2-7.6 50.7-21s21-31.7 21-50.7l0-304.6c0-19-7.6-37.2-21-50.7s-31.7-21-50.7-21zM332.4 431.4c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.5-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-4-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L351.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.5 12.5c7.5 8.4 11.5 20.3 11.8 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4 27.4-12.3 35.7c-8.2 8.3-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-101 0c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.4-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-3.9-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L250.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.4 12.5c7.6 8.4 11.5 20.3 11.9 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4.1 27.4-12.3 35.7s-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-105.6 1.1c-8.4-7.7-12.5-19.2-12.5-34.5l0-75.4c0-15.2 4.4-26.7 13.2-34.6c8.9-7.8 20.7-11.8 35.2-11.8c14.1 0 25.2 4 33.4 12c8.3 8 12.5 20 12.5 35.9l0 6-33.1 0 0-5.8c0-6.1-1.3-10.7-4-13.6c-1.1-1.5-2.6-2.7-4.3-3.5s-3.5-1.2-5.4-1.1c-5.4 0-9.2 1.8-11.4 5.6c-2.3 5.2-3.3 10.8-3 16.4l0 65.5c0 13.7 4.8 20.6 14.4 20.8c4.5 0 7.9-1.6 10.2-4.8c2.5-4.1 3.7-8.8 3.5-13.6l0-4.9 33.1 0 0 5.1c0 10.6-2.1 19.5-6.2 26.6c-4 6.9-9.9 12.5-17.1 16c-7.7 3.7-16.1 5.5-24.6 5.3c-14.2 0-25.5-3.9-33.8-11.6z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M376.3 32L0 32 0 408.3c0 19 7.6 37.2 21 50.7s31.7 21 50.7 21l304.6 0c19 0 37.2-7.6 50.7-21s21-31.7 21-50.7l0-304.6c0-19-7.6-37.2-21-50.7s-31.7-21-50.7-21zM332.4 431.4c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.5-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-4-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L351.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.5 12.5c7.5 8.4 11.5 20.3 11.8 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4 27.4-12.3 35.7c-8.2 8.3-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-101 0c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.4-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-3.9-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L250.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.4 12.5c7.6 8.4 11.5 20.3 11.9 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4.1 27.4-12.3 35.7s-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-105.6 1.1c-8.4-7.7-12.5-19.2-12.5-34.5l0-75.4c0-15.2 4.4-26.7 13.2-34.6c8.9-7.8 20.7-11.8 35.2-11.8c14.1 0 25.2 4 33.4 12c8.3 8 12.5 20 12.5 35.9l0 6-33.1 0 0-5.8c0-6.1-1.3-10.7-4-13.6c-1.1-1.5-2.6-2.7-4.3-3.5s-3.5-1.2-5.4-1.1c-5.4 0-9.2 1.8-11.4 5.6c-2.3 5.2-3.3 10.8-3 16.4l0 65.5c0 13.7 4.8 20.6 14.4 20.8c4.5 0 7.9-1.6 10.2-4.8c2.5-4.1 3.7-8.8 3.5-13.6l0-4.9 33.1 0 0 5.1c0 10.6-2.1 19.5-6.2 26.6c-4 6.9-9.9 12.5-17.1 16c-7.7 3.7-16.1 5.5-24.6 5.3c-14.2 0-25.5-3.9-33.8-11.6z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M376.3 32L0 32 0 408.3c0 19 7.6 37.2 21 50.7s31.7 21 50.7 21l304.6 0c19 0 37.2-7.6 50.7-21s21-31.7 21-50.7l0-304.6c0-19-7.6-37.2-21-50.7s-31.7-21-50.7-21zM332.4 431.4c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.5-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-4-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L351.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.5 12.5c7.5 8.4 11.5 20.3 11.8 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4 27.4-12.3 35.7c-8.2 8.3-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-101 0c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.4-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-3.9-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L250.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.4 12.5c7.6 8.4 11.5 20.3 11.9 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4.1 27.4-12.3 35.7s-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-105.6 1.1c-8.4-7.7-12.5-19.2-12.5-34.5l0-75.4c0-15.2 4.4-26.7 13.2-34.6c8.9-7.8 20.7-11.8 35.2-11.8c14.1 0 25.2 4 33.4 12c8.3 8 12.5 20 12.5 35.9l0 6-33.1 0 0-5.8c0-6.1-1.3-10.7-4-13.6c-1.1-1.5-2.6-2.7-4.3-3.5s-3.5-1.2-5.4-1.1c-5.4 0-9.2 1.8-11.4 5.6c-2.3 5.2-3.3 10.8-3 16.4l0 65.5c0 13.7 4.8 20.6 14.4 20.8c4.5 0 7.9-1.6 10.2-4.8c2.5-4.1 3.7-8.8 3.5-13.6l0-4.9 33.1 0 0 5.1c0 10.6-2.1 19.5-6.2 26.6c-4 6.9-9.9 12.5-17.1 16c-7.7 3.7-16.1 5.5-24.6 5.3c-14.2 0-25.5-3.9-33.8-11.6z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M376.3 32L0 32 0 408.3c0 19 7.6 37.2 21 50.7s31.7 21 50.7 21l304.6 0c19 0 37.2-7.6 50.7-21s21-31.7 21-50.7l0-304.6c0-19-7.6-37.2-21-50.7s-31.7-21-50.7-21zM332.4 431.4c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.5-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-4-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L351.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.5 12.5c7.5 8.4 11.5 20.3 11.8 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4 27.4-12.3 35.7c-8.2 8.3-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-101 0c-7.7-8.5-11.7-20.7-12-36.6l31.3 0c.2 14.1 5.1 21.1 14.8 21.1c4.9 0 8.4-1.6 10.4-4.7c2-3.1 3-8 3-14.8c0-5.4-1.3-9.9-3.9-13.4c-3.5-4.2-8.1-7.5-13.2-9.5L250.2 368c-10.3-4.9-17.8-10.8-22.5-17.6c-4.5-6.8-6.7-16.3-6.7-28.4c0-13.6 4-24.6 11.8-33.1c8.1-8.5 19.1-12.7 33.2-12.7c13.6 0 24.1 4.2 31.4 12.5c7.6 8.4 11.5 20.3 11.9 35.9l-30.1 0c.2-5.1-.9-10.2-3-14.8c-1.7-3.4-5-5.1-10-5.1c-8.8 0-13.2 5.2-13.2 15.7c0 5.3 1.1 9.4 3.2 12.6c3.1 3.5 7 6.2 11.4 7.8l11.1 4.9c11.5 5.3 19.7 11.7 24.8 19.4c5.1 7.7 7.6 18 7.6 31c0 15.5-4.1 27.4-12.3 35.7s-19.5 12.5-34.1 12.5s-25.6-4.2-33.4-12.7zm-105.6 1.1c-8.4-7.7-12.5-19.2-12.5-34.5l0-75.4c0-15.2 4.4-26.7 13.2-34.6c8.9-7.8 20.7-11.8 35.2-11.8c14.1 0 25.2 4 33.4 12c8.3 8 12.5 20 12.5 35.9l0 6-33.1 0 0-5.8c0-6.1-1.3-10.7-4-13.6c-1.1-1.5-2.6-2.7-4.3-3.5s-3.5-1.2-5.4-1.1c-5.4 0-9.2 1.8-11.4 5.6c-2.3 5.2-3.3 10.8-3 16.4l0 65.5c0 13.7 4.8 20.6 14.4 20.8c4.5 0 7.9-1.6 10.2-4.8c2.5-4.1 3.7-8.8 3.5-13.6l0-4.9 33.1 0 0 5.1c0 10.6-2.1 19.5-6.2 26.6c-4 6.9-9.9 12.5-17.1 16c-7.7 3.7-16.1 5.5-24.6 5.3c-14.2 0-25.5-3.9-33.8-11.6z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  display: inline-block;
+  margin-left: 20px;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group #js-logo {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  box-sizing: border-box;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  display: inline-block;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group #cSharp-logo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to right, purple, rgb(203, 136, 245));
+  display: inline-block;
+  text-align: center;
+}
+.darkmode .technical .container .technical-info .scroll-wrapper .technical-group #sql-logo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to right, red, rgb(90, 1, 1));
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 32zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 288zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 32zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 288zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  display: inline-block;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .darkmode .technical .container {
+    padding-block: 12rem;
+  }
+  .darkmode .technical .container .technical-info {
+    display: flex;
+    gap: 6rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .darkmode .technical .container .technical-info .scroll-wrapper {
+    display: flex;
+    gap: 6rem;
+    animation: scroll 30s linear infinite;
+  }
+  .darkmode .technical .container .technical-info .scroll-wrapper .technical-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .darkmode .technical .container {
     padding-block: 18rem;
   }
 }

@@ -2,120 +2,235 @@
 @import "_color.scss";
 @import "_typography.scss";
 
-.personal{
-    @include background_secondary;
-    .container{
-        @include xs {
-            padding-block: 8rem;
-            display: block;
-            text-align: center;
-            align-items: center;
-
-            h4{
-                @include title_big;
-            }
-            .personal-info{
-                border: 3px solid #194a7a;
-                background-color: #D1DBE4;
-                padding: 2rem;
-                display: grid;
-                grid-template-rows: 1fr 2fr;
-                #BioImage{
-                    grid-column: 1;
-                    display: block;
-                    width: 60%;
-                    height: auto;
-                    margin: auto;
-                    border-radius: 100%;
-                }
-
-                p{
-                    @include text;
-                    margin-top: 1rem;
-                }
-            }
-
-        }
-        @include sm {
-
-        }
-        @include md {
-            padding-block: 12rem;
-            display: block;
-            text-align: center;
-            align-items: center;
-
-            h4{
-                @include title_big;
-                margin-bottom: 2rem;
-            }
-            .personal-info{
-                border: 3px solid #194a7a;
-                background-color: #D1DBE4;
-                padding: 3rem;
-                display: grid;
-                grid-template-columns: 1fr 2fr;
-                grid-template-rows: 1fr;
-                align-items: center;
+.lightmode{
+    .personal{
+        @include background_secondary;
+        .container{
+            @include xs {
+                padding-block: 8rem;
+                display: block;
                 text-align: center;
-                justify-content: center;
-
-                #BioImage{
-                    grid-column: 1;
-                    display: block;
-                    width: 60%;
-                    height: auto;
-                    border-radius: 100%;
-
+                align-items: center;
+    
+                h4{
+                    @include title_big;
                 }
-                .personal-text{
+                .personal-info{
+                    border: 3px solid #194a7a;
+                    background-color: #D1DBE4;
+                    padding: 2rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 60%;
+                        height: auto;
+                        margin: auto;
+                        border-radius: 100%;
+                    }
+    
                     p{
-                        grid-column: 2;
                         @include text;
+                        margin-top: 1rem;
+                    }
+                }
+    
+            }
+            @include sm {
+    
+            }
+            @include md {
+                padding-block: 12rem;
+                display: block;
+                text-align: center;
+                align-items: center;
+    
+                h4{
+                    @include title_big;
+                    margin-bottom: 2rem;
+                }
+                .personal-info{
+                    border: 3px solid #194a7a;
+                    background-color: #D1DBE4;
+                    padding: 3rem;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-rows: 1fr;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+    
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 60%;
+                        height: auto;
+                        border-radius: 100%;
+    
+                    }
+                    .personal-text{
+                        p{
+                            grid-column: 2;
+                            @include text;
+                        }
                     }
                 }
             }
-        }
-        @include lg {
-            padding-block: 15rem;
-            display: block;
-            text-align: center;
-            align-items: center;
-
-            h4{
-                @include title_big;
-                margin-bottom: 4rem;
-            }
-            .personal-info{
-                border: none;
-                background-color: transparent;
-                padding: 2rem;
-                display: grid;
-                grid-template-columns: 1fr 2fr;
-                grid-template-rows: 1fr;
-                align-items: center;
+            @include lg {
+                padding-block: 15rem;
+                display: block;
                 text-align: center;
-                justify-content: center;
-
-                #BioImage{
-                    grid-column: 1;
-                    display: block;
-                    width: 75%;
-                    height: auto;
-                    border-radius: 100%;
-
+                align-items: center;
+    
+                h4{
+                    @include title_big;
+                    margin-bottom: 4rem;
                 }
-                .personal-text{
-                    p{
-                        grid-column: 2;
-                        @include text;
+                .personal-info{
+                    border: none;
+                    background-color: transparent;
+                    padding: 2rem;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-rows: 1fr;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+    
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 75%;
+                        height: auto;
+                        border-radius: 100%;
+    
+                    }
+                    .personal-text{
+                        p{
+                            grid-column: 2;
+                            @include text;
+                        }
                     }
                 }
             }
+            @include xl {
+    
+            }
         }
-        @include xl {
-
-        }
+    
     }
+}
 
+.darkmode{
+    .personal{
+        .container{
+            @include xs {
+                padding-block: 8rem;
+                display: block;
+                text-align: center;
+                align-items: center;
+    
+                h4{
+                    @include title_big;
+                }
+                .personal-info{
+                    padding: 2rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 60%;
+                        height: auto;
+                        margin: auto;
+                        border-radius: 100%;
+                    }
+    
+                    p{
+                        @include text;
+                        margin-top: 1rem;
+                    }
+                }
+    
+            }
+            @include sm {
+    
+            }
+            @include md {
+                padding-block: 12rem;
+                display: block;
+                text-align: center;
+                align-items: center;
+    
+                h4{
+                    @include title_big;
+                    margin-bottom: 2rem;
+                }
+                .personal-info{
+                    padding: 3rem;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-rows: 1fr;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+    
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 60%;
+                        height: auto;
+                        border-radius: 100%;
+    
+                    }
+                    .personal-text{
+                        p{
+                            grid-column: 2;
+                            @include text;
+                        }
+                    }
+                }
+            }
+            @include lg {
+                padding-block: 15rem;
+                display: block;
+                text-align: center;
+                align-items: center;
+    
+                h4{
+                    @include title_big;
+                    margin-bottom: 4rem;
+                }
+                .personal-info{
+                    padding: 2rem;
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-rows: 1fr;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+    
+                    #BioImage{
+                        grid-column: 1;
+                        display: block;
+                        width: 75%;
+                        height: auto;
+                        border-radius: 100%;
+    
+                    }
+                    .personal-text{
+                        p{
+                            grid-column: 2;
+                            @include text;
+                        }
+                    }
+                }
+            }
+            @include xl {
+    
+            }
+        }
+    
+    }
 }

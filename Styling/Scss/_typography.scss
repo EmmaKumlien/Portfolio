@@ -11,6 +11,12 @@
   margin: 20px 0;
   color: #194a7a;
 }
+@mixin title_medium_dark {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0;
+}
 
 @mixin title_small {
   font-size: 1.5rem;
@@ -19,6 +25,14 @@
   text-align: center;
   margin: 20px 0;
   color: #C6A76F;
+}
+
+@mixin title_small_dark {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin: 20px 0;
 }
 
 @mixin text{

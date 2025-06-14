@@ -12,8 +12,27 @@ html, body{
     font-style: normal;
     line-height: 1.5;
     margin-inline: auto;
-    @include background_primary;
     scroll-behavior: smooth !important;
+
+    .lightmode{
+        @include background_primary;
+
+            //mask created with https://css-generators.com/wavy-shapes/ 
+        .personal, .technical{
+
+            --mask:
+            radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
+            radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+            radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
+            radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+        -webkit-mask: var(--mask);
+                mask: var(--mask);
+        }
+    }
+
+    .darkmode{
+        @include background_dark;
+    }
     
     .wrapper {
         min-height: 100vh;
@@ -37,17 +56,6 @@ html, body{
         }
     }
 
-    //mask created with https://css-generators.com/wavy-shapes/ 
-    .personal, .technical{
-
-        --mask:
-        radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/152px 51% repeat-x,
-        radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
-        radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/152px 51% repeat-x,
-        radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
-      -webkit-mask: var(--mask);
-              mask: var(--mask);
-    }
     
 }
 

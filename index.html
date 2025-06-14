@@ -8,7 +8,7 @@
     <title>Emmas Portfolio</title>
 
 </head>
-<body class ="wrapper">
+<body class ="wrapper lightmode">
     
     <section class="header">
         <div class="container">
@@ -17,6 +17,7 @@
                 <div class="logo">
                     <a href="#" id="home-btn">
                         <img src="./Images/seashell_seaweed.png" alt="picture of three seashells and sea weed" id="logoImage"><img src="./Images/Emma.png" alt="Emma's name logo" id="logoText">
+                        <img src="./Images/darkmode/PixelArt_logo.png" alt="logo image picture of pixel art girl" id="logodark">
                     </a>
                 </div>
                 <div class="navigationLinks">
@@ -26,6 +27,7 @@
                         <a href="#technical">Tech Stack <i class="fa-solid fa-glasses homeSymbol" id="technicalSymbol"></i></a>
                         <!-- <a href="#testimonials">Referenser <i class="fa-solid fa-people-group homeSymbol" id="reference"></i></a> -->
                         <a href="#contact">Kontakt <i class="fa-solid fa-face-smile-beam homeSymbol" id="smiley"></i></a>
+                        <button id="toggle-theme">Byt tema</button>
                     </div>
                 </div>
             </div>
@@ -41,8 +43,18 @@
                         <h4>Webbutvecklare baserad i Göteborg </h4>
                         <h5>– med kärlek till kust och kod.</h5>
                     </div>
+                    <div id="quote_dark">
+                        <h4>Webbutvecklare baserad i Göteborg </h4>
+                        <h5>– med kärlek till spel och kod.</h5>
+                    </div>
                     <div id="open_shell_img">
                         <img src="./Images/Blaemussla_open.png" alt="picture of a sea shell">
+                    </div>
+                    <div class="darkmode-hero">
+                        <div class="pixelArt">
+                            <img src="./Images/darkmode/PixelArt_Cat.png" alt="pixelart of cat" id="pixelArt_Cat">
+                            <img src="./Images/darkmode/PixelArt_Me.png" alt="pixelart of me" id="pixelArt_Me">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,6 +215,7 @@
         </div>
     </section>
 
+    <script src="./JavaScript/themeSelect.js"></script>
     <script src="./JavaScript/backgroundImages.js"></script>
     <script src="./JavaScript/menuDropDown.js"></script>
     <script src="./JavaScript/setCSharpLogo.js"></script>

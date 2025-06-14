@@ -31,6 +31,21 @@
     }
 }
 
+@mixin button_dark {
+    @include darkmode_button;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.5s ease;
+  
+      &:hover {
+          transition: color 0.3s ease;
+        }
+  }
+
 @mixin component_box{
     @include component_color;
     border-radius: 10px;
@@ -89,6 +104,25 @@
 
 @mixin navigation {
     @include navigation_color;
+    a{
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        font-size: 1.05rem;
+        
+        &:hover {
+            transition: color 0.3s ease;
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        i{
+            margin: 0.5rem 0 0 0.5rem;
+        }
+    }
+
+}
+@mixin navigation-dark {
+    @include dark_navigation_color;
     a{
         text-decoration: none;
         padding: 15px 20px;

@@ -2,114 +2,235 @@
 @import "_typography.scss";
 
 
-.hero-section{
-    position: relative;
-    margin-bottom: -3rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .container{
-        @include xs {
-            padding-block: 10rem;
-            .hero{
-                display: block;
-                align-items: center;
-                text-align: center;
-
-                #quote{
-                    font-size: 1.5rem;
-                    text-align: center;
-                    margin: 1rem 0;
-
-                    h4{
-                        @include title_big;
-                    }
-                    h5{
-                        @include title_medium;
-                    }
-                }
-                #open_shell_img{
-                    display: none;
-                    img{
-                        width: 9rem;
-                        height: auto;
-                        position: absolute;
-                        right: 10%;
-                        bottom: -5rem;
-                        z-index: 2;
-                    }
-                }
-            }
-        }
-        @include sm {
-
-        }
-        @include md {
-            padding-block: 12rem;
-            .hero{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-                #quote{
-                    font-size: 1.5rem;
-                    text-align: center;
-                    margin: 1rem 2rem;
-
-                    h4{
-                        @include title_big;
-                    }
-                    h5{
-                        @include title_medium;
-                    }
-                }
-                #open_shell_img{
+.lightmode{
+    .hero-section{
+        position: relative;
+        margin-bottom: -3rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .container{
+            @include xs {
+                padding-block: 10rem;
+                .hero{
                     display: block;
-                    img{
-                        width: 20%;
-                        height: auto;
-                        position: absolute;
-                        right: 0;
-                        left: auto;
-                        bottom: -60rem;
-                    }
-                }
-            }
-        }
-        @include lg {
-            .hero{
-                padding-block: 12rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-
-                #quote{
-                    font-size: 1.5rem;
+                    align-items: center;
                     text-align: center;
-                    margin: 0 2rem;
-                    margin-top: -3rem;
-
-                    h4{
-                        @include title_big;
+                    
+                    #quote{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 1rem 0;
+    
+                        h4{
+                            @include title_big;
+                        }
+                        h5{
+                            @include title_medium;
+                        }
                     }
-                    h5{
-                        @include title_medium;
+                    #open_shell_img{
+                        display: none;
+                        img{
+                            width: 9rem;
+                            height: auto;
+                            position: absolute;
+                            right: 10%;
+                            bottom: -5rem;
+                            z-index: 2;
+                        }
                     }
-                }
-                #open_shell_img{
-
-                    img{
-                        width: 25%;
-                        height: auto;
+                    #quote_dark{
+                        display:none;
+                    }
+                    .darkmode-hero{
+                        display: none;
                     }
                 }
             }
-        }
-        @include xl {
-
-        }
-    }
+            @include sm {
     
+            }
+            @include md {
+                padding-block: 12rem;
+                .hero{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    #quote{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 1rem 2rem;
+    
+                        h4{
+                            @include title_big;
+                        }
+                        h5{
+                            @include title_medium;
+                        }
+                    }
+                    #open_shell_img{
+                        display: block;
+                        img{
+                            width: 20%;
+                            height: auto;
+                            position: absolute;
+                            right: 0;
+                            left: auto;
+                            bottom: -60rem;
+                        }
+                    }
+                }
+            }
+            @include lg {
+                .hero{
+                    padding-block: 12rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    #quote{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 0 2rem;
+                        margin-top: -3rem;
+    
+                        h4{
+                            @include title_big;
+                        }
+                        h5{
+                            @include title_medium;
+                        }
+                    }
+                    #open_shell_img{
+    
+                        img{
+                            width: 25%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            @include xl {
+    
+            }
+        }
+        
+    }
+}
+
+.darkmode{
+    .hero-section{
+        position: relative;
+        margin-bottom: -3rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .container{
+            @include xs {
+                padding-block: 10rem;
+                .hero{
+                    display: block;
+                    align-items: center;
+                    text-align: center;
+    
+                    #quote_dark{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 1rem 0;
+    
+                        h4{
+                            @include title_big;
+                        }
+                        h5{
+                            @include title_medium_dark;
+                        }
+                    }
+                    .darkmode-hero{
+
+                        .pixelArt{
+                            position: absolute;
+                            top: 16%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            text-align: center;
+                            #pixelArt_Me{
+                                width: 8rem;
+                                height: auto;
+                            }
+                            #pixelArt_Cat{
+                                width: 6rem;
+                                height: auto;
+                            }
+                        }
+                    }
+                    #open_shell_img{
+                        display: none;
+                    }
+                    #quote{
+                        display: none;
+                    }
+                }
+            }
+            @include sm {
+    
+            }
+            @include md {
+                padding-block: 12rem;
+                .hero{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    #quote-dark{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 1rem 2rem;
+    
+                    }
+                }
+            }
+            @include lg {
+                .hero{
+                    padding-block: 8rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    #quote-dark{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 0 2rem;
+                        margin-top: -3rem;
+                    }
+
+                    .darkmode-hero{
+                        .pixelArt{
+                            top: 20%;
+                            #pixelArt_Me{
+                                width: 12rem;
+                                height: auto;
+                            }
+                            #pixelArt_Cat{
+                                width: 8rem;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            @include xl {
+    
+            }
+        }
+        
+    }
 }
