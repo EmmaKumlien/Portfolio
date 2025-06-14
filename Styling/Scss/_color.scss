@@ -11,8 +11,14 @@ $text-color: #000000;
 //darkmode
 $dark-background: #000000;
 $dark-text:#ffffff;
-$dark-button: rgb(247, 4, 247);
-$dark-hover-color: rgb(83, 2, 83);
+$dark-button: #C8ACD6;
+$dark-hover-color: #2E236C;
+
+//color palette
+$one: #17153B;
+$two: #2E236C;
+$three: #433D8B;
+$four: #C8ACD6;
 
 
 @mixin background_primary {

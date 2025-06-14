@@ -355,7 +355,7 @@ html .wrapper .footer, body .wrapper .footer {
 }
 .darkmode .header .container .navigation .navigationLinks #toggle-theme {
   border: 1px solid #ffffff;
-  background-color: rgb(247, 4, 247);
+  background-color: #C8ACD6;
   color: #000000;
   transition: color 0.3s ease;
   border-radius: 5px;
@@ -373,7 +373,7 @@ html .wrapper .footer, body .wrapper .footer {
 }
 .darkmode .header .container .navigation .navigationLinks #toggle-theme:hover {
   border: 1px solid #ffffff;
-  background-color: rgb(83, 2, 83);
+  background-color: #2E236C;
   color: #ffffff;
 }
 .darkmode .header .container .navigation .navigationLinks #toggle-theme:hover {
@@ -397,7 +397,7 @@ html .wrapper .footer, body .wrapper .footer {
 }
 .darkmode .header .container .navigation .navigationLinks.active a:hover {
   color: #ffffff;
-  background-color: rgb(83, 2, 83);
+  background-color: #2E236C;
 }
 .darkmode .header .container .navigation .navigationLinks.active a {
   text-decoration: none;
@@ -477,7 +477,7 @@ html .wrapper .footer, body .wrapper .footer {
   }
   .darkmode .header .container .navigation .navigationLinks a:hover {
     color: #ffffff;
-    background-color: rgb(83, 2, 83);
+    background-color: #2E236C;
   }
   .darkmode .header .container .navigation .navigationLinks a {
     text-decoration: none;
@@ -498,7 +498,7 @@ html .wrapper .footer, body .wrapper .footer {
   }
   .darkmode .header .container .navigation .navigationLinks a.active {
     border: 1px solid #ffffff;
-    background-color: rgb(247, 4, 247);
+    background-color: #C8ACD6;
     color: #000000;
     transition: color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -506,7 +506,7 @@ html .wrapper .footer, body .wrapper .footer {
   }
   .darkmode .header .container .navigation .navigationLinks a.active:hover {
     border: 1px solid #ffffff;
-    background-color: rgb(83, 2, 83);
+    background-color: #2E236C;
     color: #ffffff;
   }
 }
@@ -793,6 +793,7 @@ html .wrapper .footer, body .wrapper .footer {
   text-align: center;
   font-weight: 700;
   margin: 20px 0;
+  color: #C8ACD6;
 }
 .darkmode .hero-section .container .hero .darkmode-hero .pixelArt {
   position: absolute;
@@ -1178,19 +1179,19 @@ html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
 
-.projects .container {
+.lightmode .projects .container {
   padding-block: 8rem;
   display: block;
   align-items: center;
   text-align: center;
 }
-.projects .container h4 {
+.lightmode .projects .container h4 {
   font-size: 3rem;
   text-align: center;
   margin: 20px 0;
   margin-bottom: 3rem;
 }
-.projects .container .project-grid {
+.lightmode .projects .container .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 1fr;
@@ -1198,7 +1199,7 @@ html .wrapper .footer, body .wrapper .footer {
   text-align: center;
   gap: 2rem;
 }
-.projects .container .project-grid .project-card {
+.lightmode .projects .container .project-grid .project-card {
   background-color: #4A5A6A;
   color: #000000;
   box-shadow: 0 6px 10px #000000;
@@ -1214,20 +1215,20 @@ html .wrapper .footer, body .wrapper .footer {
   text-align: center;
   align-items: center;
 }
-.projects .container .project-grid .project-card:hover {
+.lightmode .projects .container .project-grid .project-card:hover {
   background-color: #C6A76F;
   color: #000000;
 }
-.projects .container .project-grid .project-card:hover {
+.lightmode .projects .container .project-grid .project-card:hover {
   transition: color 0.5s ease;
 }
-.projects .container .project-grid .project-card h3 {
+.lightmode .projects .container .project-grid .project-card h3 {
   font-size: 1.4rem;
   min-height: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.projects .container .project-grid .project-card img {
+.lightmode .projects .container .project-grid .project-card img {
   border-radius: 100%;
   width: 4rem;
   height: 4rem;
@@ -1236,14 +1237,14 @@ html .wrapper .footer, body .wrapper .footer {
      object-fit: fill;
   transition: transform 0.3s ease;
 }
-.projects .container .project-grid .project-card img:hover {
+.lightmode .projects .container .project-grid .project-card img:hover {
   transform: scale(3);
 }
-.projects .container .project-grid .project-card .tags {
+.lightmode .projects .container .project-grid .project-card .tags {
   background-color: inherit;
   color: #000000;
 }
-.projects .container .project-grid .project-card .buttons {
+.lightmode .projects .container .project-grid .project-card .buttons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1251,7 +1252,7 @@ html .wrapper .footer, body .wrapper .footer {
   gap: 1rem;
   margin-top: 1rem;
 }
-.projects .container .project-grid .project-card .buttons .live {
+.lightmode .projects .container .project-grid .project-card .buttons .live {
   background-color: #194a7a;
   color: #D1DBE4 !important;
   border: 1px solid #a3b7ca;
@@ -1265,15 +1266,15 @@ html .wrapper .footer, body .wrapper .footer {
   text-decoration: none;
   transition: color 0.5s ease;
 }
-.projects .container .project-grid .project-card .buttons .live:hover {
+.lightmode .projects .container .project-grid .project-card .buttons .live:hover {
   background-color: #a3b7ca;
   border: 1px solid #194a7a;
   color: #000000 !important;
 }
-.projects .container .project-grid .project-card .buttons .live:hover {
+.lightmode .projects .container .project-grid .project-card .buttons .live:hover {
   transition: color 0.3s ease;
 }
-.projects .container .project-grid .project-card .buttons .read-more {
+.lightmode .projects .container .project-grid .project-card .buttons .read-more {
   border: 1px solid #194a7a;
   background-color: #a3b7ca;
   color: #000000;
@@ -1286,25 +1287,25 @@ html .wrapper .footer, body .wrapper .footer {
   text-decoration: none;
   transition: color 0.5s ease;
 }
-.projects .container .project-grid .project-card .buttons .read-more:hover {
+.lightmode .projects .container .project-grid .project-card .buttons .read-more:hover {
   border: 1px solid #194a7a;
   background-color: #194a7a;
   color: #D1DBE4;
 }
-.projects .container .project-grid .project-card .buttons .read-more:hover {
+.lightmode .projects .container .project-grid .project-card .buttons .read-more:hover {
   transition: color 0.3s ease;
 }
 @media (min-width: 768px) {
-  .projects .container {
+  .lightmode .projects .container {
     padding-block: 12rem;
   }
-  .projects .container h4 {
+  .lightmode .projects .container h4 {
     margin-bottom: 5rem;
   }
-  .projects .container .project-grid .project-card h3 {
+  .lightmode .projects .container .project-grid .project-card h3 {
     max-height: 4rem;
   }
-  .projects .container .project-grid .project-card img {
+  .lightmode .projects .container .project-grid .project-card img {
     border-radius: 100%;
     width: 6rem;
     height: 6rem;
@@ -1313,15 +1314,162 @@ html .wrapper .footer, body .wrapper .footer {
        object-fit: fill;
     transition: transform 0.3s ease;
   }
-  .projects .container .project-grid .project-card img:hover {
+  .lightmode .projects .container .project-grid .project-card img:hover {
     transform: scale(3);
   }
 }
 @media (min-width: 992px) {
-  .projects .container {
+  .lightmode .projects .container {
     padding-block: 15rem;
   }
-  .projects .container h4 {
+  .lightmode .projects .container h4 {
+    margin-bottom: 6rem;
+  }
+}
+.darkmode .projects .container {
+  padding-block: 8rem;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+.darkmode .projects .container h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 3rem;
+}
+.darkmode .projects .container .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.darkmode .projects .container .project-grid .project-card {
+  background-color: #4A5A6A;
+  color: #000000;
+  box-shadow: 0 6px 10px #000000;
+  border-radius: 10px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  align-items: center;
+}
+.darkmode .projects .container .project-grid .project-card:hover {
+  background-color: #C6A76F;
+  color: #000000;
+}
+.darkmode .projects .container .project-grid .project-card:hover {
+  transition: color 0.5s ease;
+}
+.darkmode .projects .container .project-grid .project-card h3 {
+  font-size: 1.4rem;
+  min-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.darkmode .projects .container .project-grid .project-card img {
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  margin-block: 1rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: transform 0.3s ease;
+}
+.darkmode .projects .container .project-grid .project-card img:hover {
+  transform: scale(3);
+}
+.darkmode .projects .container .project-grid .project-card .tags {
+  background-color: inherit;
+  color: #000000;
+}
+.darkmode .projects .container .project-grid .project-card .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .live {
+  background-color: #194a7a;
+  color: #D1DBE4 !important;
+  border: 1px solid #a3b7ca;
+  transition: color 0.3s ease;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .live:hover {
+  background-color: #a3b7ca;
+  border: 1px solid #194a7a;
+  color: #000000 !important;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .live:hover {
+  transition: color 0.3s ease;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .read-more {
+  border: 1px solid #194a7a;
+  background-color: #a3b7ca;
+  color: #000000;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .read-more:hover {
+  border: 1px solid #194a7a;
+  background-color: #194a7a;
+  color: #D1DBE4;
+}
+.darkmode .projects .container .project-grid .project-card .buttons .read-more:hover {
+  transition: color 0.3s ease;
+}
+@media (min-width: 768px) {
+  .darkmode .projects .container {
+    padding-block: 12rem;
+  }
+  .darkmode .projects .container h4 {
+    margin-bottom: 5rem;
+  }
+  .darkmode .projects .container .project-grid .project-card h3 {
+    max-height: 4rem;
+  }
+  .darkmode .projects .container .project-grid .project-card img {
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    margin-block: 1rem;
+    -o-object-fit: fill;
+       object-fit: fill;
+    transition: transform 0.3s ease;
+  }
+  .darkmode .projects .container .project-grid .project-card img:hover {
+    transform: scale(3);
+  }
+}
+@media (min-width: 992px) {
+  .darkmode .projects .container {
+    padding-block: 15rem;
+  }
+  .darkmode .projects .container h4 {
     margin-bottom: 6rem;
   }
 }
@@ -1377,26 +1525,26 @@ html .wrapper .footer, body .wrapper .footer {
   grid-row: 3;
 }
 
-.contact {
+.lightmode .contact {
   margin-top: -4rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.contact .container {
+.lightmode .contact .container {
   padding-block: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.contact .container h4 {
+.lightmode .contact .container h4 {
   font-size: 3rem;
   text-align: center;
   margin: 20px 0;
   margin-bottom: 3rem;
 }
-.contact .container .contact-info-box {
+.lightmode .contact .container .contact-info-box {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 3rem;
   border-radius: 10px;
@@ -1404,62 +1552,148 @@ html .wrapper .footer, body .wrapper .footer {
   width: 90%;
   margin: 0 auto;
 }
-.contact .container .contact-info-box p {
+.lightmode .contact .container .contact-info-box p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
-.contact .container .contact-info-box .contact-links {
+.lightmode .contact .container .contact-info-box .contact-links {
   margin-top: 2rem;
 }
-.contact .container .contact-info-box .contact-links a {
+.lightmode .contact .container .contact-info-box .contact-links a {
   margin: 0 1rem;
   font-size: 2rem;
   color: #000000;
   transition: color 0.3s ease;
 }
-.contact .container .contact-info-box .contact-links a:hover {
+.lightmode .contact .container .contact-info-box .contact-links a:hover {
   color: #C6A76F;
 }
 @media (min-width: 768px) {
-  .contact .container {
+  .lightmode .contact .container {
     padding-block: 12rem;
   }
-  .contact .container .contact-info-box {
+  .lightmode .contact .container .contact-info-box {
     width: 70%;
   }
 }
 @media (min-width: 992px) {
-  .contact .container {
+  .lightmode .contact .container {
     padding-block: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .contact .container h4 {
+  .lightmode .contact .container h4 {
     font-size: 3rem;
     text-align: center;
     margin: 20px 0;
     margin-bottom: 3rem;
   }
-  .contact .container .contact-info-box {
+  .lightmode .contact .container .contact-info-box {
     width: 50%;
   }
-  .contact .container .contact-info-box p {
+  .lightmode .contact .container .contact-info-box p {
     margin-bottom: 1.5rem;
   }
-  .contact .container .contact-info-box .contact-links {
+  .lightmode .contact .container .contact-info-box .contact-links {
     margin-top: 2rem;
   }
-  .contact .container .contact-info-box .contact-links a {
+  .lightmode .contact .container .contact-info-box .contact-links a {
     margin: 0 1rem;
     font-size: 3rem;
     color: #000000;
     transition: color 0.3s ease;
   }
-  .contact .container .contact-info-box .contact-links a:hover {
+  .lightmode .contact .container .contact-info-box .contact-links a:hover {
+    color: #C6A76F;
+  }
+}
+.darkmode .contact {
+  margin-top: -4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.darkmode .contact .container {
+  padding-block: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.darkmode .contact .container h4 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 3rem;
+}
+.darkmode .contact .container .contact-info-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto;
+}
+.darkmode .contact .container .contact-info-box p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.darkmode .contact .container .contact-info-box .contact-links {
+  margin-top: 2rem;
+}
+.darkmode .contact .container .contact-info-box .contact-links a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+.darkmode .contact .container .contact-info-box .contact-links a:hover {
+  color: #C6A76F;
+}
+@media (min-width: 768px) {
+  .darkmode .contact .container {
+    padding-block: 12rem;
+  }
+  .darkmode .contact .container .contact-info-box {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .darkmode .contact .container {
+    padding-block: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .darkmode .contact .container h4 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 3rem;
+  }
+  .darkmode .contact .container .contact-info-box {
+    width: 50%;
+  }
+  .darkmode .contact .container .contact-info-box p {
+    margin-bottom: 1.5rem;
+  }
+  .darkmode .contact .container .contact-info-box .contact-links {
+    margin-top: 2rem;
+  }
+  .darkmode .contact .container .contact-info-box .contact-links a {
+    margin: 0 1rem;
+    font-size: 3rem;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  .darkmode .contact .container .contact-info-box .contact-links a:hover {
     color: #C6A76F;
   }
 }
